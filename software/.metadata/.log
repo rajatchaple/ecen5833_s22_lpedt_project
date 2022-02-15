@@ -487,3 +487,214 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-14 21:27:52.087
 !MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2022-02-14 21:38:52.283
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY org.eclipse.cdt.debug.edc 4 0 2022-02-14 21:38:56.229
+!MESSAGE Unknown context [rc.root.000440184709] is reported in suspended event. Make sure TCF agent has reported contextAdded event first.
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.core 4 0 2022-02-14 21:39:38.334
+!MESSAGE TCF task failed
+!STACK 0
+java.io.IOException: Command [C 1362 DebugAdapter disconnect "root.000440184709"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:838)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:185)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:327)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-02-14 21:39:38.337
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@18a89d79): Status ERROR: org.eclipse.cdt.debug.edc code=0 terminate() failed. java.io.IOException: Command [C 1363 RunControl terminate "rc.root.000440184709"] aborted' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.debug.edc 4 0 2022-02-14 21:39:38.337
+!MESSAGE terminate() failed.
+!STACK 0
+java.io.IOException: Command [C 1363 RunControl terminate "rc.root.000440184709"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:838)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:185)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:327)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 4 0 2022-02-14 21:39:38.339
+!MESSAGE Lost connection to agent
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:185)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:327)
+
+!ENTRY org.eclipse.cdt.debug.edc 4 0 2022-02-14 21:39:38.342
+!MESSAGE Lost connection to debugger agent "Silicon Labs TCF Agent". It's usually because the agent died abnormally.
+
+The debug session "Silicon Labs ARM MCU: EFR32BG13P632F512GM48" will be terminated.
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:185)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:327)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-14 21:40:44.750
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-14 21:44:23.388
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2022-02-14 21:58:08.730
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY org.eclipse.cdt.debug.edc 4 0 2022-02-14 21:58:12.525
+!MESSAGE Unknown context [rc.root.000440184709] is reported in suspended event. Make sure TCF agent has reported contextAdded event first.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-14 22:16:40.868
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2022-02-14 22:16:45.886
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY org.eclipse.cdt.debug.edc 4 0 2022-02-14 22:16:52.452
+!MESSAGE Unknown context [rc.root.000440184709] is reported in suspended event. Make sure TCF agent has reported contextAdded event first.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-02-14 22:20:59.567
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@464a6c39): Status ERROR: com.silabs.ss.framework.debugger.tcf.agent code=0 No compatible debug agents found null' resulted in an error.
+!SUBENTRY 1 com.silabs.ss.framework.debugger.tcf.agent 4 0 2022-02-14 22:20:59.567
+!MESSAGE No compatible debug agents found
+
+!ENTRY org.eclipse.ui 4 0 2022-02-14 22:20:59.587
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$11.handleSuccess(DefaultVMModelProxyStrategy.java:736)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:116)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.lambda$0(SimpleDisplayExecutor.java:81)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:36)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 4 0 2022-02-14 22:20:59.588
+!MESSAGE No compatible debug agents found
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-14 22:21:08.671
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-15 10:48:21.912
+!MESSAGE Could not disable AEM data on the adapter: 000440184709
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-15 11:01:33.760
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-15 11:01:39.829
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-15 11:01:39.830
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+
+!ENTRY org.eclipse.tcf 4 0 2022-02-15 11:01:40.104
+!MESSAGE Failed to shutdown TCF event dispatch thread
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.lang.Object.wait(Native Method)
+	at java.base/java.lang.Thread.join(Thread.java:1305)
+	at java.base/java.lang.Thread.join(Thread.java:1379)
+	at org.eclipse.tcf.EventQueue.shutdown(EventQueue.java:76)
+	at org.eclipse.tcf.Activator.stop(Activator.java:154)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:899)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1029)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1885)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1760)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SESSION 2022-02-15 15:01:47.751 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-15 15:01:50.486
+!MESSAGE ContentServer started at: 127.0.0.1, 62804
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-15 15:01:50.502
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-15 15:02:13.357
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-15 15:02:19.728
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-15 15:02:26.956
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-15 15:02:31.042
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-15 15:03:10.267
+!MESSAGE Could not disable AEM data on the adapter: 000440184709
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-15 15:06:21.908
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-15 15:06:24.931
+!MESSAGE Invalid discovery key: null

@@ -25,8 +25,8 @@ extern "C" {
 
 #define SL_MEMLCD_LS013B7DH03             1
 
-#define SL_MEMLCD_DISPLAY_WIDTH           128
-#define SL_MEMLCD_DISPLAY_HEIGHT          128
+#define SL_MEMLCD_DISPLAY_WIDTH           144//128
+#define SL_MEMLCD_DISPLAY_HEIGHT          168//128
 #define SL_MEMLCD_DISPLAY_BPP             1
 #define SL_MEMLCD_DISPLAY_RGB_3BIT        0
 

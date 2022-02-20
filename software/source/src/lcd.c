@@ -55,6 +55,7 @@
 #define INCLUDE_LOG_DEBUG 1
 #include "log.h"
 
+#include "lcd_bitmap.h"
 
 
 
@@ -203,11 +204,14 @@ void displayPrintf(enum display_row row, const char *format, ...)
       LOG_ERROR("Draw GLIB_drawStringOnLine() returned non-zero error code=0x%04x", (unsigned int) status);
   }
 
-  status = GLIB_drawCircle(&display->glibContext, 72,
-                           84, 15);
-  if (status != GLIB_OK) {
-        LOG_ERROR("Draw GLIB_drawCircle() returned non-zero error code=0x%04x", (unsigned int) status);
-    }
+  GLIB_clear(&display->glibContext);
+
+  draw_custom_graphics(&display->glibContext);
+//  status = GLIB_drawCircle(&display->glibContext, 72,
+//                           84, 15);
+//  if (status != GLIB_OK) {
+//        LOG_ERROR("Draw GLIB_drawCircle() returned non-zero error code=0x%04x", (unsigned int) status);
+//    }
 
   // Update the data the LCD is displaying
   status = DMD_updateDisplay();
@@ -337,5 +341,15 @@ void displayUpdate()
 } // displayUpdate()
 
 
-draw_custom()
-EMSTATUS GLIB_drawPixel(GLIB_Context_t *pContext, int32_t x, int32_t y)
+void draw_custom_graphics(GLIB_Context_t *pContext)
+{
+  for(int r = 0; r<144;r++)
+    {
+      for(int c = 0; c<168;c++)
+        {//array[width * row + col] = value;
+          if(cu_logo[168*r + c] == 0)
+            GLIB_drawPixel(pContext, r, 168-c);
+        }
+    }
+}
+//EMSTATUS GLIB_drawPixel(GLIB_Context_t *pContext, int32_t x, int32_t y)

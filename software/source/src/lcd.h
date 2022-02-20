@@ -69,6 +69,7 @@ void displayInit();
 void displayUpdate();
 void displayPrintf(enum display_row row, const char *format, ...);
 
+void draw_custom_graphics(GLIB_Context_t *pContext);
 
 
 

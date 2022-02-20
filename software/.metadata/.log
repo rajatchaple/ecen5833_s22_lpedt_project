@@ -734,3 +734,584 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-16 17:56:47.655
 !MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-17 00:11:52.660
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-17 00:11:52.663
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+
+!ENTRY org.eclipse.tcf 4 0 2022-02-17 00:11:53.298
+!MESSAGE Failed to shutdown TCF event dispatch thread
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.lang.Object.wait(Native Method)
+	at java.base/java.lang.Thread.join(Thread.java:1305)
+	at java.base/java.lang.Thread.join(Thread.java:1379)
+	at org.eclipse.tcf.EventQueue.shutdown(EventQueue.java:76)
+	at org.eclipse.tcf.Activator.stop(Activator.java:154)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:899)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1029)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1885)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1760)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SESSION 2022-02-17 22:26:20.200 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-17 22:26:23.154
+!MESSAGE ContentServer started at: 127.0.0.1, 51057
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-17 22:26:23.177
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-17 22:27:29.001
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-17 22:27:43.436
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-17 22:27:48.922
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:29:00.219
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:31:33.528
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:32:35.464
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-17 22:33:04.191
+!MESSAGE Could not connect debugger. Target voltage too low - 0.026 V measured.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-02-17 22:33:04.191
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@6c692ffc): Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. Target voltage too low - 0.026 V measured. null' resulted in an error.
+!SUBENTRY 1 com.silabs.ss.support.mcu.part.core 4 0 2022-02-17 22:33:04.191
+!MESSAGE Could not connect debugger. Target voltage too low - 0.026 V measured.
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-17 22:33:04.207
+!MESSAGE Could not connect debugger. Target voltage too low - 0.026 V measured.
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-17 22:36:48.666
+!MESSAGE Could not connect debugger. Target voltage too low - 0.025 V measured.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-02-17 22:36:48.676
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@6d0b6c88): Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. Target voltage too low - 0.025 V measured. null' resulted in an error.
+!SUBENTRY 1 com.silabs.ss.support.mcu.part.core 4 0 2022-02-17 22:36:48.676
+!MESSAGE Could not connect debugger. Target voltage too low - 0.025 V measured.
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-17 22:36:48.676
+!MESSAGE Could not connect debugger. Target voltage too low - 0.025 V measured.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:40:35.709
+!MESSAGE Could not disable AEM data on the adapter: 000440184709
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:41:14.019
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:43:33.425
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:43:58.665
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:46:23.649
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:47:19.942
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:47:31.848
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:48:13.057
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:56:42.111
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 22:58:55.090
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 23:14:31.370
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-17 23:18:49.216
+!MESSAGE Could not disable AEM data on the adapter: 000440184709
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2022-02-18 11:01:42.801
+!MESSAGE No network interfaces found.
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-02-18 12:32:15.484
+!MESSAGE An internal error occurred during: "InSight Ethernet UDP Discovery".
+!STACK 0
+java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached
+	at java.base/java.lang.Thread.start0(Native Method)
+	at java.base/java.lang.Thread.start(Thread.java:803)
+	at com.silabs.ss.platform.api.apack.ip.EthernetDiscovery.ensureThreads(EthernetDiscovery.java:182)
+	at com.silabs.ss.platform.api.apack.ip.EthernetDiscovery.locate(EthernetDiscovery.java:60)
+	at com.silabs.ss.platform.api.device.core.locator.DeviceLocatorJob.run(DeviceLocatorJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 4 0 2022-02-18 12:32:15.806
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTError: No more handles)
+	at org.eclipse.swt.SWT.error(SWT.java:4720)
+	at org.eclipse.swt.SWT.error(SWT.java:4635)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:188)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:36)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.swt.SWTError: No more handles
+	at org.eclipse.swt.SWT.error(SWT.java:4746)
+	at org.eclipse.swt.SWT.error(SWT.java:4635)
+	at org.eclipse.swt.SWT.error(SWT.java:4606)
+	at org.eclipse.swt.widgets.Display.create32bitDIB(Display.java:996)
+	at org.eclipse.swt.widgets.Display.createIcon(Display.java:1078)
+	at org.eclipse.swt.widgets.Decorations.setImages(Decorations.java:946)
+	at org.eclipse.swt.widgets.Decorations.setImages(Decorations.java:1000)
+	at org.eclipse.jface.window.Window.configureShell(Window.java:373)
+	at org.eclipse.ui.internal.statushandlers.InternalDialog.configureShell(InternalDialog.java:191)
+	at org.eclipse.jface.window.Window.createShell(Window.java:498)
+	at org.eclipse.jface.window.Window.create(Window.java:430)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.ui.internal.statushandlers.WorkbenchStatusDialogManagerImpl.doAddStatusAdapter(WorkbenchStatusDialogManagerImpl.java:248)
+	at org.eclipse.ui.internal.statushandlers.WorkbenchStatusDialogManagerImpl.addStatusAdapter(WorkbenchStatusDialogManagerImpl.java:189)
+	at org.eclipse.ui.statushandlers.WorkbenchStatusDialogManager.addStatusAdapter(WorkbenchStatusDialogManager.java:152)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.showStatusAdapter(WorkbenchErrorHandler.java:79)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.lambda$0(WorkbenchErrorHandler.java:54)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	... 25 more
+
+!ENTRY org.eclipse.tcf 4 0 2022-02-18 12:32:15.861
+!MESSAGE Cannot get list of network interfaces
+!STACK 0
+java.io.IOException: Cannot run program "ipconfig": CreateProcess error=1450, Insufficient system resources exist to complete the requested service
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:591)
+	at java.base/java.lang.Runtime.exec(Runtime.java:493)
+	at org.eclipse.tcf.internal.services.local.LocatorService.getWindowsSubNetList(LocatorService.java:847)
+	at org.eclipse.tcf.internal.services.local.LocatorService.getSubNetList(LocatorService.java:777)
+	at org.eclipse.tcf.internal.services.local.LocatorService.access$0(LocatorService.java:764)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1.run(LocatorService.java:227)
+Caused by: java.io.IOException: CreateProcess error=1450, Insufficient system resources exist to complete the requested service
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:478)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:154)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 7 more
+!SESSION 2022-02-18 13:39:31.599 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-18 13:39:34.263
+!MESSAGE ContentServer started at: 127.0.0.1, 54749
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 13:39:34.274
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-02-18 13:39:58.873
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-18 13:40:19.297
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-18 13:40:26.728
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-18 13:40:30.266
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-18 14:04:32.715
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 18:29:24.846
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 18:29:24.848
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+
+!ENTRY org.eclipse.cdt.dsf 4 -1 2022-02-18 18:29:25.052
+!MESSAGE Uncaught exception in DSF executor thread
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.debug.edc.internal.launch.ShutdownSequence$1.execute(ShutdownSequence.java:64)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.run(Sequence.java:380)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.cdt.dsf 4 -1 2022-02-18 18:29:25.053
+!MESSAGE Uncaught exception in DSF executor thread
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.debug.edc.internal.launch.ShutdownSequence$1.execute(ShutdownSequence.java:64)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.run(Sequence.java:380)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2022-02-18 18:29:25.214
+!MESSAGE Failed to shutdown TCF event dispatch thread
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.lang.Object.wait(Native Method)
+	at java.base/java.lang.Thread.join(Thread.java:1305)
+	at java.base/java.lang.Thread.join(Thread.java:1379)
+	at org.eclipse.tcf.EventQueue.shutdown(EventQueue.java:76)
+	at org.eclipse.tcf.Activator.stop(Activator.java:154)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:899)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1029)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1885)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1760)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SESSION 2022-02-18 22:42:03.668 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-18 22:42:06.116
+!MESSAGE ContentServer started at: 127.0.0.1, 50240
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 22:42:06.136
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-18 22:42:22.350
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-18 22:42:27.553
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-18 22:42:34.038
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-18 22:42:39.030
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.framework.project.core 4 0 2022-02-18 22:44:53.141
+!MESSAGE Module file not found: C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\.studio\.\modules\LibraryModules\Micrium\uCos3Client.slsproj
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 22:47:52.503
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 22:47:52.503
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+!SESSION 2022-02-18 23:02:32.640 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-18 23:02:34.967
+!MESSAGE ContentServer started at: 127.0.0.1, 50344
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-18 23:02:34.986
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-18 23:02:50.654
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-18 23:02:56.591
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-18 23:03:01.592
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-18 23:03:05.339
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-18 23:49:58.517
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-18 23:53:17.519
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2022-02-19 16:42:54.364
+!MESSAGE Browser workarea set to: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.browser
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-19 16:43:08.210
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 16:43:20.659
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 16:43:20.673
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-19 16:43:23.754
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-19 16:43:24.254
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-19 16:43:24.653
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 16:49:58.306
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 16:49:58.307
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-19 17:00:58.760
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:01:01.738
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:01:01.753
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:01:02.111
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:01:02.124
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:26:01.969
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1001 reason=null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:26:01.989
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1001 reason=null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:26:01.992
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1001 reason=null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-19 17:26:01.993
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1001 reason=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-19 17:26:02.988
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-19 17:26:02.988
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+!SESSION 2022-02-19 19:23:08.841 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-19 19:23:10.899
+!MESSAGE ContentServer started at: 127.0.0.1, 64718
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-19 19:23:10.915
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2022-02-19 19:23:21.225
+!MESSAGE Browser workarea set to: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.browser
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-19 19:23:24.568
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-19 19:23:27.024
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-19 19:23:34.199
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-19 19:23:38.623
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2022-02-19 19:24:08.871
+!MESSAGE Error processing AEM V2 packet
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.base/java.util.TreeMap$NavigableSubMap$SubMapIterator.nextEntry(TreeMap.java:1700)
+	at java.base/java.util.TreeMap$NavigableSubMap$SubMapEntryIterator.next(TreeMap.java:1748)
+	at java.base/java.util.TreeMap$NavigableSubMap$SubMapEntryIterator.next(TreeMap.java:1742)
+	at java.base/java.util.AbstractMap$2$1.next(AbstractMap.java:418)
+	at org.eclipse.cdt.debug.edc.internal.symbols.Scope.getScopeAtAddress(Scope.java:134)
+	at org.eclipse.cdt.debug.edc.internal.symbols.dwarf.DwarfCompileUnit.getScopeAtAddress(DwarfCompileUnit.java:276)
+	at org.eclipse.cdt.debug.edc.internal.symbols.Scope.getScopeAtAddress(Scope.java:137)
+	at org.eclipse.cdt.debug.edc.internal.symbols.dwarf.DwarfModuleScope.getScopeAtAddress(DwarfModuleScope.java:145)
+	at com.silabs.ss.tool.energyprofiler.internal.api.core.assistant.SourceLookupHelper.getFunctionNameAtAddress(SourceLookupHelper.java:155)
+	at com.silabs.ss.tool.energyprofiler.internal.core.assistant.ProgramReader.getFunctionNameAtAddress(ProgramReader.java:36)
+	at com.silabs.ss.tool.energyprofiler.core.ProgramReaderUtils.getFunctionNameAtAddress(ProgramReaderUtils.java:59)
+	at com.silabs.ss.tool.energyprofiler.core.FunctionStatsUtils.updateFunctionName(FunctionStatsUtils.java:49)
+	at com.silabs.ss.tool.energyprofiler.core.FunctionStatsUtils.updateFunctionData(FunctionStatsUtils.java:20)
+	at com.silabs.ss.tool.energyprofiler.core.BaseProfilerDataProvider.updateFunctionData(BaseProfilerDataProvider.java:513)
+	at com.silabs.ss.tool.energyprofiler.core.BaseProfilerDataProvider.updateFunctionData(BaseProfilerDataProvider.java:505)
+	at com.silabs.ss.tool.energyprofiler.core.BaseProfilerDataProvider.newSamplesAdded(BaseProfilerDataProvider.java:366)
+	at com.silabs.ss.tool.energyprofiler.core.BaseProfilerDataProvider2.newSamplesAdded(BaseProfilerDataProvider2.java:351)
+	at com.silabs.ss.tool.energyprofiler.internal.multinode.provider.CommonAemDataProvider.newSamplesAdded(CommonAemDataProvider.java:683)
+	at com.silabs.ss.tool.energyprofiler.internal.multinode.provider.AemSamplerMapListenerBridge$SamplerListener.samplesAdded(AemSamplerMapListenerBridge.java:59)
+	at com.silabs.aem.sampling.array.AemSamplerByArray.endSampleSet(AemSamplerByArray.java:106)
+	at com.silabs.aem.decoder.AemSynthesizer.processAemDecodedFrameV2(AemSynthesizer.java:314)
+	at com.silabs.aem.decoder.AemSynthesizer.newEvent(AemSynthesizer.java:109)
+	at com.ember.workbench.synthesizer.EfrRadioInfoCorrectionSynthesizer.newEvent(EfrRadioInfoCorrectionSynthesizer.java:149)
+	at com.ember.workbench.synthesizer.DataPersistenceSynthesizer.newEvent(DataPersistenceSynthesizer.java:130)
+	at com.ember.workbench.synthesizer.StreamInfoSynthesizer.newEvent(StreamInfoSynthesizer.java:108)
+	at com.ember.workbench.synthesizer.BasicSynthesizerPipeline.newEvent(BasicSynthesizerPipeline.java:140)
+	at com.ember.workbench.core.BasicStream.newEvent(BasicStream.java:226)
+	at com.ember.workbench.core.LiveDataSource.accept(LiveDataSource.java:187)
+	at com.ember.workbench.core.LiveDataSource.accept(LiveDataSource.java:1)
+	at com.silabs.core.util.DataBuffer.run(DataBuffer.java:110)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-19 19:24:22.308
+!MESSAGE Could not disable AEM data on the adapter: 000440184709
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-19 19:24:38.352
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-19 22:14:10.566
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-19 22:14:10.566
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+
+!ENTRY org.eclipse.tcf 4 0 2022-02-19 22:14:10.855
+!MESSAGE Failed to shutdown TCF event dispatch thread
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.lang.Object.wait(Native Method)
+	at java.base/java.lang.Thread.join(Thread.java:1305)
+	at java.base/java.lang.Thread.join(Thread.java:1379)
+	at org.eclipse.tcf.EventQueue.shutdown(EventQueue.java:76)
+	at org.eclipse.tcf.Activator.stop(Activator.java:154)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:899)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1029)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1885)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1760)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.base/java.lang.Thread.run(Thread.java:834)

@@ -62,7 +62,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=INSBOKSF
+DocumentUniqueId=
 
 [Document2]
 DocumentPath=Project Outputs for LPEDT_proj_lib\LPEDT_proj_lib\LPEDT_proj_lib.SchLib
@@ -79,7 +79,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=VPSUKZOW
+DocumentUniqueId=
 
 [SearchPath1]
 Path=C:\Users\Saloni\Documents\LPEDT\project\ecen5833_s22_lpedt_project\hardware\library\Project Outputs for LPEDT_proj_lib\LPEDT_proj_lib\*.*

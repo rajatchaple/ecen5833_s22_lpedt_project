@@ -11,12 +11,15 @@
 #include "src/i2c.h"
 #include "app.h"
 
+
 #define SI7021_DEVICE_ADDR 0x40
+
 
 uint8_t cmd_data;
 uint8_t read_data[2];
 I2C_TransferSeq_TypeDef transfer_seq;
 
+uint8_t data[2];  //data[0] Write and data[1] Read
 
 void i2c_init() {
 
@@ -64,6 +67,126 @@ void write_cmd() {
       LOG_ERROR("I2C_TransferInit status %d write: failed\n\r", (uint32_t)transferStatus);
   }
 }
+
+
+//function to perform write command operation on slave
+void i2c_write(uint8_t address, uint8_t cmd) {
+
+  I2C_TransferReturn_TypeDef transferStatus;
+
+  i2c_init();
+
+  //structure to write command from master to slave
+  transfer_seq.addr = address << 1;
+  transfer_seq.flags = I2C_FLAG_WRITE;
+  transfer_seq.buf[0].data = &cmd;
+  transfer_seq.buf[0].len = sizeof(cmd_data);
+
+  //enable I2C interrupt
+  NVIC_EnableIRQ(I2C0_IRQn);
+
+  //initialize I2C transfer
+  transferStatus = I2C_TransferInit(I2C0, &transfer_seq);
+
+  //check transfer function return status
+  if(transferStatus < 0) {
+      LOG_ERROR("I2C_TransferInit status %d write: failed\n\r", (uint32_t)transferStatus);
+  }
+}
+
+/** -------------------------------------------------------------------------------------------
+ * @brief i2c routine to read data from sensor over i2c
+ *
+ * @param true/false
+ * @return Read value
+ *-------------------------------------------------------------------------------------------- **/
+I2C_TransferReturn_TypeDef i2c_read(uint8_t address, uint8_t* data_buffer)
+{
+  I2C_TransferReturn_TypeDef transferStatus;
+
+  NVIC_DisableIRQ(I2C0_IRQn);
+  transfer_seq.addr = address << 1;
+  transfer_seq.flags = I2C_FLAG_READ;
+  transfer_seq.buf[0].data = data_buffer;
+  transfer_seq.buf[0].len = 1;
+
+  NVIC_EnableIRQ(I2C0_IRQn);
+  transferStatus = I2C_TransferInit(I2C0, &transfer_seq);
+
+  //check transfer function return status
+    if(transferStatus < 0) {
+        LOG_ERROR("I2C_TransferInit status %d write: failed\n\r", (uint32_t)transferStatus);
+    }
+
+  return transferStatus;
+}
+
+uint8_t data[2];
+/** -------------------------------------------------------------------------------------------
+ * @brief i2c routine to write data to sensor over i2c
+ *
+ * @param true/false
+ * @return None
+ *-------------------------------------------------------------------------------------------- **/
+I2C_TransferReturn_TypeDef i2c_write_write(uint8_t address, uint8_t reg, uint8_t value)
+{
+  I2C_TransferReturn_TypeDef transferStatus;
+
+
+  data[0] = reg;
+  data[1] = value;
+  NVIC_DisableIRQ(I2C0_IRQn);
+  transfer_seq.addr = address << 1;
+  transfer_seq.flags = I2C_FLAG_WRITE_WRITE;
+  transfer_seq.buf[0].data = data;
+  transfer_seq.buf[0].len = 2;
+
+  NVIC_EnableIRQ(I2C0_IRQn);
+  transferStatus = I2C_TransferInit(I2C0, &transfer_seq);
+
+  //check transfer function return status
+    if(transferStatus < 0) {
+        LOG_ERROR("I2C_TransferInit status %d write: failed\n\r", (uint32_t)transferStatus);
+    }
+
+  return transferStatus;
+}
+
+
+uint8_t register_add;
+uint8_t data_read_from_imu_sensor;
+/** -------------------------------------------------------------------------------------------
+ * @brief i2c routine to read data from a sensor over i2c
+ *
+ * @param true/false
+ * @return None
+ *-------------------------------------------------------------------------------------------- **/
+I2C_TransferReturn_TypeDef i2c_write_read(uint8_t address, uint8_t reg, uint8_t* data_read)
+{
+  I2C_TransferReturn_TypeDef transferStatus;
+
+  //S+ADDR(W)+DATA0+Sr+ADDR(R)+DATA1+P
+  register_add = reg;
+
+  NVIC_DisableIRQ(I2C0_IRQn);
+  transfer_seq.addr = address << 1;
+  transfer_seq.flags = I2C_FLAG_WRITE_READ;
+  transfer_seq.buf[0].data = &register_add;
+  transfer_seq.buf[0].len = 1;
+  transfer_seq.buf[1].data = &data_read_from_imu_sensor;
+  transfer_seq.buf[1].len = 1;
+
+  NVIC_EnableIRQ(I2C0_IRQn);
+  transferStatus = I2C_TransferInit(I2C0, &transfer_seq);
+
+  //check transfer function return status
+    if(transferStatus < 0) {
+        LOG_ERROR("I2C_TransferInit status %d write-read: failed\n\r", (uint32_t)transferStatus);
+    }
+
+    return transferStatus;
+}
+
 
 //function to perform read operation from slave
 void read_cmd() {

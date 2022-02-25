@@ -69,7 +69,7 @@
 //#define LOWEST_ENERGY_MODE 3
 
 //set timer period
-#define LETIMER_PERIOD_MS  3000
+#define LETIMER_PERIOD_MS  15000
 
 
 // See: https://docs.silabs.com/gecko-platform/latest/service/power_manager/overview

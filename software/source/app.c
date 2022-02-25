@@ -104,8 +104,8 @@ SL_WEAK void app_init(void)
   NVIC_EnableIRQ(LETIMER0_IRQn);
   NVIC_ClearPendingIRQ(GPIO_EVEN_IRQn);
   NVIC_EnableIRQ(GPIO_EVEN_IRQn);
-  NVIC_ClearPendingIRQ(GPIO_ODD_IRQn);
-  NVIC_EnableIRQ(GPIO_ODD_IRQn);
+//  NVIC_ClearPendingIRQ(GPIO_ODD_IRQn);
+//  NVIC_EnableIRQ(GPIO_ODD_IRQn);
 
 }
 
@@ -157,12 +157,12 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
   // Some events require responses from our application code,
   // and don’t necessarily advance our state machines.
   // For assignment 5 uncomment the next 2 function calls
-  handle_ble_event(evt); // put this code in ble.c/.h
+//  handle_ble_event(evt); // put this code in ble.c/.h
 
 #if DEVICE_IS_BLE_SERVER
   //FOR SERVER
   // sequence through states driven by events
-  temperature_state_machine(evt);    // put this code in scheduler.c/.h
+//  temperature_state_machine(evt);    // put this code in scheduler.c/.h
 
 #else
   //FOR CLIENT

@@ -13,6 +13,8 @@
 #include "app.h"
 #include "src/irq.h"
 
+uint32_t encoder_pulses_A = 0;
+
 uint32_t letimerMilliseconds() {
   uint32_t time_ms;
   ble_data_struct_t *bleData = getBleDataPtr();
@@ -44,6 +46,7 @@ void LETIMER0_IRQHandler(void) {
 
       //set scheduler event
       schedulerSetEventUF();
+      encoder_pulses_A = 0;
 
       bleData->rollover_cnt+=1;
 
@@ -75,32 +78,66 @@ void I2C0_IRQHandler(void) {
   }
 }
 
-void GPIO_EVEN_IRQHandler(void) {
+//void GPIO_EVEN_IRQHandler(void) {
+//
+//  ble_data_struct_t *bleData = getBleDataPtr();
+//
+//  // determine pending interrupts in peripheral
+//  uint32_t reason = GPIO_IntGet();
+//
+//  GPIO_IntClear(reason);
+//
+//  //get the push button status
+//  uint8_t button_status = GPIO_PinInGet(PB0_port, PB0_pin);
+//
+//  //check if the interrupt triggered was from PB0
+//  if(reason == 64) {
+//
+//      if(!button_status) {
+//          bleData->button_pressed = true;
+//          schedulerSetEventButtonPressed();
+//      }
+//
+//      else {
+//          bleData->button_pressed = false;
+//          schedulerSetEventButtonReleased();
+//      }
+//  }
+//}
 
-  ble_data_struct_t *bleData = getBleDataPtr();
 
-  // determine pending interrupts in peripheral
+/** -------------------------------------------------------------------------------------------
+* Interrupt handler for Even GPIOs
+*-------------------------------------------------------------------------------------------- **/
+void GPIO_EVEN_IRQHandler()
+{
+  //Getting reason behind raised interrupt
   uint32_t reason = GPIO_IntGet();
 
+  //Clearing an interrupt
   GPIO_IntClear(reason);
 
-  //get the push button status
-  uint8_t button_status = GPIO_PinInGet(PB0_port, PB0_pin);
-
-  //check if the interrupt triggered was from PB0
-  if(reason == 64) {
-
-      if(!button_status) {
-          bleData->button_pressed = true;
-          schedulerSetEventButtonPressed();
-      }
-
-      else {
-          bleData->button_pressed = false;
-          schedulerSetEventButtonReleased();
-      }
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();
+  if(reason == 64)
+  {
+    if(GPIO_PinInGet(PB0_port, PB0_pin) == false)
+      schedulerSetEventButtonPressed();
+    else if(GPIO_PinInGet(PB0_port, PB0_pin) == true)
+      schedulerSetEventButtonReleased();
   }
-}
+  else if(reason == 1024)
+  {
+    encoder_pulses_A++;
+    reason = 0;
+    //scheduler_set_event_proximity_detected();
+    //Interuupt on proximity received
+  }
+
+  CORE_EXIT_CRITICAL();
+
+
+} // GPIO_EVEN_IRQHandler()
 
 #if !DEVICE_IS_BLE_SERVER
 

@@ -44,7 +44,7 @@
 // Include logging for this file
 #define INCLUDE_LOG_DEBUG 1
 #include "src/log.h"
-
+#include "src/imu.h"
 
 
 
@@ -62,6 +62,8 @@ int main(void)
   // Students: Place all of your 1 time initialization code in this function.
   //           See app.c
   app_init();
+
+//  init_imu();
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)
 

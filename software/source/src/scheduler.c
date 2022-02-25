@@ -14,6 +14,8 @@
 
 uint32_t MyEvent;
 
+extern uint32_t encoder_pulses_A;
+
 sl_status_t rc=0;
 
 #if !DEVICE_IS_BLE_SERVER
@@ -74,6 +76,7 @@ void schedulerSetEventUF() {
 
   // exit critical section
   CORE_EXIT_CRITICAL();
+  LOG_INFO("V=%d\n\r", encoder_pulses_A);
 
 } // schedulerSetEventXXX()
 

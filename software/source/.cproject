@@ -270,6 +270,126 @@
                                     <listOptionValue builtIn="false" value="-fmessage-length=0"/>
                                     								
                                 </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.602676497" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/Device/SiliconLabs/EFR32BG13P/Include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/app/common/util/app_assert}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/app/common/util/app_log}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/common/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/protocol/bluetooth/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/hardware/board/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/bootloader}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/bootloader/api}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/CMSIS/Include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/driver/debug/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/device_init/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/middleware/glib/dmd}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/middleware/glib}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/emlib/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/middleware/glib/glib}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/driver/i2cspm/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/iostream/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/hardware/driver/memlcd/src/ls013b7dh03}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/mbedtls/include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/sl_component/sl_mbedtls_support/config}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/mbedtls/library}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/sl_component/sl_alt/include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/sl_component/sl_mbedtls_support/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/hardware/driver/memlcd/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/hardware/driver/memlcd/inc/memlcd_usart}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/mpu/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/hardware/driver/mx25_flash_shutdown/inc/sl_mx25_flash_shutdown_usart}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/app/bluetooth/common/ota_dfu}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/power_manager/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/sl_component/sl_psa_driver/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/common}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/protocol/ble}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/protocol/ieee802154}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/protocol/zwave}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/protocol/mfm}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/chip/efr32/efr32xg1x}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/plugin/pa-conversions}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/plugin/pa-conversions/efr32xg1x}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/radio/rail_lib/plugin/rail_util_pti}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/silicon_labs/silabs_core/memory_manager}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/common/toolchain/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/system/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/sleeptimer/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/util/third_party/crypto/sl_component/sl_protocol_crypto/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gecko_sdk_3.2.1/platform/service/udelay/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/autogen}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/config}&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.def.symbols.2041912983" name="Defined symbols (-D)" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.def.symbols" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="EFR32BG13P632F512GM48=1"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="SL_COMPONENT_CATALOG_PRESENT=1"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="MBEDTLS_CONFIG_FILE=&lt;mbedtls_config.h&gt;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="MBEDTLS_PSA_CRYPTO_CLIENT=1"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="MBEDTLS_PSA_CRYPTO_CONFIG_FILE=&lt;psa_crypto_config.h&gt;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="SL_RAIL_LIB_MULTIPROTOCOL_SUPPORT=0"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="SL_RAIL_UTIL_PA_CONFIG_HEADER=&lt;sl_rail_util_pa_config.h&gt;"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.input.1197453142" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                                 							
                             </tool>
                             							
@@ -484,6 +604,26 @@
                                 <option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.circulardependency.166581805" name="Use library file circular dependency" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.circulardependency" value="true" valueType="boolean"/>
                                 								
                                 <option id="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.dependencies.projects.2061228469" name="Project Dependencies" superClass="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker.dependencies.projects"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.68402609" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gcc"/>
+                                    									
+                                    <listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="c"/>
+                                    									
+                                    <listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="m"/>
+                                    									
+                                    <listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="nosys"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.889437332" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
+                                    								
+                                </inputType>
                                 							
                             </tool>
                             							

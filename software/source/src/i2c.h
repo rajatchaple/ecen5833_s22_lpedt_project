@@ -28,6 +28,13 @@ float convertTemp();
 //function to write a command to slave
 void write_cmd();
 
+void i2c_write(uint8_t address, uint8_t cmd);
+
+I2C_TransferReturn_TypeDef i2c_write_write(uint8_t address, uint8_t reg, uint8_t value);
+I2C_TransferReturn_TypeDef i2c_read(uint8_t address, uint8_t* data_buffer);
+I2C_TransferReturn_TypeDef i2c_write_read(uint8_t address, uint8_t reg, uint8_t* data_read_from_imu);
+
+
 //function to read temperature from sensor
 void read_cmd();
 

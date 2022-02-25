@@ -34,6 +34,9 @@
 #define PB1_port gpioPortF
 #define PB1_pin  7
 
+#define IMU_INTRPT_port    (gpioPortD)
+#define IMU_INTRPT_pin     (10)
+
 
 
 // Function prototypes

@@ -26,27 +26,29 @@ void gpioInit()
 {
 
   // Student Edit:
+//
+//  //GPIO_DriveStrengthSet(LED0_port, gpioDriveStrengthStrongAlternateStrong);
+//  GPIO_DriveStrengthSet(LED0_port, gpioDriveStrengthWeakAlternateWeak);
+//  GPIO_PinModeSet(LED0_port, LED0_pin, gpioModePushPull, false);
+//
+//  //GPIO_DriveStrengthSet(LED1_port, gpioDriveStrengthStrongAlternateStrong);
+//  GPIO_DriveStrengthSet(LED1_port, gpioDriveStrengthWeakAlternateWeak);
+//  GPIO_PinModeSet(LED1_port, LED1_pin, gpioModePushPull, false);
+//
+//  GPIO_DriveStrengthSet(sensor_port, gpioDriveStrengthWeakAlternateWeak);
+//  GPIO_PinModeSet(sensor_port, sensor_pin, gpioModePushPull, false);
+//
+//  GPIO_DriveStrengthSet(lcd_port, gpioDriveStrengthWeakAlternateWeak);
+//  GPIO_PinModeSet(lcd_port, lcd_pin, gpioModePushPull, false);
+//
+//  GPIO_PinModeSet(PB0_port, PB0_pin, gpioModeInputPullFilter, true);
+//  GPIO_ExtIntConfig(PB0_port, PB0_pin, PB0_pin, true, true, true);
+//
+//  GPIO_PinModeSet(PB1_port, PB1_pin, gpioModeInputPullFilter, true);
+//  GPIO_ExtIntConfig(PB1_port, PB1_pin, PB1_pin, true, true, true);
 
-  //GPIO_DriveStrengthSet(LED0_port, gpioDriveStrengthStrongAlternateStrong);
-  GPIO_DriveStrengthSet(LED0_port, gpioDriveStrengthWeakAlternateWeak);
-  GPIO_PinModeSet(LED0_port, LED0_pin, gpioModePushPull, false);
-
-  //GPIO_DriveStrengthSet(LED1_port, gpioDriveStrengthStrongAlternateStrong);
-  GPIO_DriveStrengthSet(LED1_port, gpioDriveStrengthWeakAlternateWeak);
-  GPIO_PinModeSet(LED1_port, LED1_pin, gpioModePushPull, false);
-
-  GPIO_DriveStrengthSet(sensor_port, gpioDriveStrengthWeakAlternateWeak);
-  GPIO_PinModeSet(sensor_port, sensor_pin, gpioModePushPull, false);
-
-  GPIO_DriveStrengthSet(lcd_port, gpioDriveStrengthWeakAlternateWeak);
-  GPIO_PinModeSet(lcd_port, lcd_pin, gpioModePushPull, false);
-
-  GPIO_PinModeSet(PB0_port, PB0_pin, gpioModeInputPullFilter, true);
-  GPIO_ExtIntConfig(PB0_port, PB0_pin, PB0_pin, true, true, true);
-
-  GPIO_PinModeSet(PB1_port, PB1_pin, gpioModeInputPullFilter, true);
-  GPIO_ExtIntConfig(PB1_port, PB1_pin, PB1_pin, true, true, true);
-
+  GPIO_PinModeSet(IMU_INTRPT_port, IMU_INTRPT_pin, gpioModeInputPullFilter, true);  //DOUT : true means pull up
+  GPIO_ExtIntConfig (IMU_INTRPT_port, IMU_INTRPT_pin, IMU_INTRPT_pin, false, true, true);  //enable at falling edge
 } // gpioInit()
 
 

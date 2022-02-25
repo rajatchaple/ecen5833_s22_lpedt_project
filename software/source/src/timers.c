@@ -30,7 +30,7 @@
 //structure to define parameters for LETIMER
 const LETIMER_Init_TypeDef LETIMER_INIT_STRUCT = {
     false,              /* Disable timer when initialization completes. */
-    true,              /* Allow counter to run during debug halt. */
+    false,              /* Allow counter to run during debug halt. */
     true,               /* load COMP0 into CNT on underflow. */
     false,              /* Do not load COMP1 into COMP0 when REP0 reaches 0. */
     0,                  /* Idle value 0 for output 0. */

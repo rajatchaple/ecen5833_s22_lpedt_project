@@ -2733,3 +2733,506 @@ org.eclipse.tcf.core.ErrorReport: TCF error report:
 
 !ENTRY org.eclipse.cdt.debug.edc 4 0 2022-02-24 16:46:54.591
 !MESSAGE Unknown context [rc.root.000440184709] is reported in suspended event. Make sure TCF agent has reported contextAdded event first.
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2022-02-24 20:45:18.252
+!MESSAGE Browser workarea set to: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.browser
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-24 20:45:26.638
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-24 20:45:26.652
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-24 20:45:30.835
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-24 20:45:31.531
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-24 20:45:32.023
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-24 21:26:59.143
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1006 reason=Disconnected
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-24 21:26:59.144
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1006 reason=Disconnected
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 08:27:19.990
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 08:27:22.065
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 09:09:39.154
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1006 reason=Disconnected
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 09:09:39.155
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1006 reason=Disconnected
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 11:55:45.306
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 11:55:45.353
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 11:56:01.124
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1006 reason=Disconnected
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 11:56:01.126
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1006 reason=Disconnected
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 12:22:30.191
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 12:22:30.243
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 12:22:33.505
+!MESSAGE Could not disable AEM data on the adapter: 000440184709
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 12:22:41.193
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 12:22:41.194
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 13:17:03.542
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 13:17:03.545
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+
+!ENTRY org.eclipse.tcf 4 0 2022-02-25 13:17:03.929
+!MESSAGE Failed to shutdown TCF event dispatch thread
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.lang.Object.wait(Native Method)
+	at java.base/java.lang.Thread.join(Thread.java:1305)
+	at java.base/java.lang.Thread.join(Thread.java:1379)
+	at org.eclipse.tcf.EventQueue.shutdown(EventQueue.java:76)
+	at org.eclipse.tcf.Activator.stop(Activator.java:154)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:899)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1029)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1885)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1760)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:658)
+	at org.eclipse.osgi.container.Module.stop(Module.java:520)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SESSION 2022-02-25 15:19:19.790 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-25 15:19:22.693
+!MESSAGE ContentServer started at: 127.0.0.1, 62570
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 15:19:22.715
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2022-02-25 15:19:50.582
+!MESSAGE Browser workarea set to: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.browser
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 15:19:53.550
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-25 15:19:58.141
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:20:02.999
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"ERROR: Detect part job status is unknown."}
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-25 15:20:09.004
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-25 15:20:09.435
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-25 15:20:12.825
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:20:22.573
+!MESSAGE Detect Part Servlet Request: {"currentDebugInterface":"SWD"}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:20:22.574
+!MESSAGE currentDebugInterface: SWD
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:20:22.583
+!MESSAGE Initialized the Detect Part Job with debug interface SWD!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:20:22.584
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:20:22.586
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:20:22.592
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:20:23.172
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:20:23.173
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:20:23.182
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:21:18.955
+!MESSAGE Detect Part Servlet Request: {"currentDebugInterface":"JTAG"}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:21:18.957
+!MESSAGE currentDebugInterface: JTAG
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:18.958
+!MESSAGE Initialized the Detect Part Job with debug interface JTAG!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:18.960
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:18.963
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:18.964
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:19.648
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:19.649
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:21:19.652
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:21:25.069
+!MESSAGE Detect Part Servlet Request: {"currentDebugInterface":"SWD"}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:21:25.070
+!MESSAGE currentDebugInterface: SWD
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:25.072
+!MESSAGE Initialized the Detect Part Job with debug interface SWD!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:25.073
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:25.075
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:25.076
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:25.630
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:25.632
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:21:25.633
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:21:47.819
+!MESSAGE Detect Part Servlet Request: {"currentDebugInterface":"SWD"}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:21:47.820
+!MESSAGE currentDebugInterface: SWD
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:47.822
+!MESSAGE Initialized the Detect Part Job with debug interface SWD!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:47.824
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:47.827
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:47.828
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:48.494
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:21:48.496
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:21:48.499
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 15:21:56.332
+!MESSAGE File not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.metadata\.plugins\com.ember.core\binary_image_model.state (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at com.ember.workbench.EmberWorkbench.load(EmberWorkbench.java:402)
+	at com.ember.workbench.binaryimage.BinaryImageModel.startup(BinaryImageModel.java:102)
+	at com.ember.workbench.binaryimage.BinaryImageModel.instance(BinaryImageModel.java:93)
+	at com.ember.workbench.gui.dialog.AdapterConfigurator.setApplicationCombo(AdapterConfigurator.java:289)
+	at com.ember.workbench.gui.dialog.AdapterConfigurator.setAdapter(AdapterConfigurator.java:325)
+	at com.ember.workbench.gui.dialog.AdapterConfigurator.fillUI(AdapterConfigurator.java:231)
+	at com.silabs.ss.platform.api.device.ui.config.DeviceConfigurationDialog.createDialogArea(DeviceConfigurationDialog.java:115)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at com.silabs.ss.platform.api.device.ui.config.DeviceConfigurationDialog.open(DeviceConfigurationDialog.java:245)
+	at com.silabs.ss.support.hwtools.internal.ui.HWToolsDeviceStatus$5.run(HWToolsDeviceStatus.java:657)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:36)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:22:12.169
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 15:22:19.611
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:22:23.084
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"Could not connect debugger."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:22:23.350
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"Could not connect debugger."}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:22:26.139
+!MESSAGE Detect Part Servlet Request: {"currentDebugInterface":"SWD"}
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:22:26.142
+!MESSAGE currentDebugInterface: SWD
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:22:26.145
+!MESSAGE Initialized the Detect Part Job with debug interface SWD!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:22:26.146
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:22:26.149
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:22:26.150
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:22:26.720
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:22:26.721
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:22:26.726
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:23:16.103
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2022-02-25 15:23:16.172
+!MESSAGE Demo information file is empty at C:\SiliconLabs\SimplicityStudio\v5\configuration\org.eclipse.osgi\353\0\.cp\demos\demos.xml
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 15:23:17.122
+!MESSAGE Unknown architecture(s) [efm32~series[2]~device_configuration[3], efm32~series[2]~device_configuration[4]] in sample app Internal Storage Bootloader (single image on 512kB device with 131072k flash base)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 15:23:17.129
+!MESSAGE Unknown architecture(s) [efm32~series[2]~device_configuration[4]] in sample app Internal Storage Bootloader (single image on 1536kB device with 131072k flash base)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 15:23:17.135
+!MESSAGE Unknown architecture(s) [efm32~series[2]~device_configuration[2]~flash[352K]] in sample app Internal Storage Bootloader (single image on 352kB device)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2022-02-25 15:23:17.144
+!MESSAGE Unknown architecture(s) [efm32~series[2]~device_configuration[3], efm32~series[2]~device_configuration[4]] in sample app Internal Storage Bootloader (single image on 352kB device with 131072k flash base)
+
+!ENTRY com.silabs.ss.tool.launcher.ui 4 0 2022-02-25 15:23:26.181
+!MESSAGE Error getting document links from docs.silabs.com
+!STACK 0
+java.util.concurrent.CompletionException: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:840)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:195)
+	at org.json.JSONObject.<init>(JSONObject.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 9 more
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:23:27.708
+!MESSAGE Job status in detectpartjob websocket connect: {"isRunning":false,"resultIsOk":false,"message":"Could not connect debugger."}
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.280
+!MESSAGE Initialized the Detect Part Job with debug interface swd!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.281
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.282
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.284
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.636
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.637
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:24:57.642
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.971
+!MESSAGE Initialized the Detect Part Job with debug interface swd!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.972
+!MESSAGE Passed in IDevice: J-Link Silicon Labs (440236751) [1366:0105@004:001]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.974
+!MESSAGE Running the Detect Part Job!
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:57.975
+!MESSAGE Found Apack Function(s): [TYPE: detectPart CMD: com.silabs.ss.platform.api.apack.core.model.CommandLine@7e792764 (APACK: Simplicity Commander)]
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:58.303
+!MESSAGE Detect Part Job ERRORED OUT with null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 1 0 2022-02-25 15:24:58.304
+!MESSAGE Detect Part Job Complete with Status ERROR: com.silabs.ss.support.mcu.part.core code=0 Could not connect debugger. null
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2022-02-25 15:24:58.305
+!MESSAGE Could not connect debugger.
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 15:25:50.435
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1005 reason=null
+
+!ENTRY com.silabs.ss.support.hwtools.ui 1 0 2022-02-25 16:16:51.940
+!MESSAGE DRR: DetectPart onWebSocketClose CALLED statusCode=1001 reason=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 16:16:53.737
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 16:16:53.738
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version

@@ -25,7 +25,6 @@ NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
 AutoSheetNumbering=1
 AutoCrossReferences=0
-NewIndexingOfSheetSymbols=0
 PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
@@ -48,6 +47,23 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
+DocumentPath=Block_Diagram.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GXKSKHBL
+
+[Document2]
 DocumentPath=efr32_general.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -64,7 +80,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FWSFTPFN
 
-[Document2]
+[Document3]
 DocumentPath=efr32_ioport.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -81,7 +97,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AYHDGMVW
 
-[Document3]
+[Document4]
 DocumentPath=efr32_radio_interface.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -98,7 +114,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SZVANFSY
 
-[Document4]
+[Document5]
 DocumentPath=power_management.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -115,8 +131,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XWQASIGP
 
-[Document5]
-DocumentPath=Sensors.SchDoc
+[Document6]
+DocumentPath=Mag_Enc_Sensors.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -132,7 +148,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BDEITFPB
 
-[Document6]
+[Document7]
 DocumentPath=ultrasonic_sensor.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -268,7 +284,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Adobe PDF
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -1027,7 +1043,6 @@ Type122=2
 Type123=1
 Type124=1
 Type125=1
-Type126=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW

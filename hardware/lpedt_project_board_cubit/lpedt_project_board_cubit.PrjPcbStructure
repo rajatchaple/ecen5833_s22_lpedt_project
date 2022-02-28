@@ -1,6 +1,7 @@
-Record=TopLevelDocument|FileName=efr32_general.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=efr32_general.SchDoc|FileName=efr32_ioport.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=efr32_general.SchDoc|FileName=efr32_radio_interface.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=efr32_general.SchDoc|FileName=power_management.SchDoc|SheetNumber=4
-Record=NoMainPathDocument|SourceDocument=efr32_general.SchDoc|FileName=Sensors.SchDoc|SheetNumber=5
-Record=NoMainPathDocument|SourceDocument=efr32_general.SchDoc|FileName=ultrasonic_sensor.SchDoc|SheetNumber=6
+Record=TopLevelDocument|FileName=Block_Diagram.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=Block_Diagram.SchDoc|FileName=efr32_general.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Block_Diagram.SchDoc|FileName=efr32_ioport.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=Block_Diagram.SchDoc|FileName=efr32_radio_interface.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=Block_Diagram.SchDoc|FileName=Mag_Enc_Sensors.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=Block_Diagram.SchDoc|FileName=power_management.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=Block_Diagram.SchDoc|FileName=ultrasonic_sensor.SchDoc|SheetNumber=7

@@ -3236,3 +3236,63 @@ Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 1 [c
 
 !ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-25 16:16:53.738
 !MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+!SESSION 2022-02-27 22:50:53.337 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-27 22:50:57.009
+!MESSAGE ContentServer started at: 127.0.0.1, 53682
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-27 22:50:57.030
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2022-02-27 22:51:26.891
+!MESSAGE Browser workarea set to: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.browser
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-27 22:51:35.522
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-27 22:51:43.791
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-27 22:51:48.005
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-27 22:52:59.089
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-27 22:52:59.090
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version
+!SESSION 2022-02-27 22:53:00.006 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2022-02-27 22:53:03.649
+!MESSAGE ContentServer started at: 127.0.0.1, 59524
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-27 22:53:03.667
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2022-02-27 22:53:30.444
+!MESSAGE Browser workarea set to: C:\Users\rajat\OneDrive\Low Power\Project\github\ecen5833_s22_lpedt_project\software\.browser
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-27 22:53:41.145
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2022-02-27 22:53:48.286
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2022-02-27 22:53:52.141
+!MESSAGE Local timestamp file does not exist: C:\SiliconLabs\SimplicityStudio\v5\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-27 23:11:47.828
+!MESSAGE Deleted Shared Daemon File: C:\Users\rajat\.uc\cli\mainstudio.running
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2022-02-27 23:11:47.830
+!MESSAGE Deleted Shared Daemon Version File: C:\Users\rajat\.uc\cli\mainstudio.running.version

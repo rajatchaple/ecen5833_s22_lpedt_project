@@ -501,7 +501,7 @@
         </children>
       </children>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_Uq-gm5RtEeyZ56az3EPEWg" elementId="com.silabs.ss.platform.internal.api.device.ui.DeviceView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="No Adapters" iconURI="platform:/plugin/com.silabs.ss.platform.device.ui/icons/devices_view.gif" tooltip="" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_Uq-gm5RtEeyZ56az3EPEWg" elementId="com.silabs.ss.platform.internal.api.device.ui.DeviceView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Debug Adapters" iconURI="platform:/plugin/com.silabs.ss.platform.device.ui/icons/devices_view.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="com.silabs.ss.platform.internal.api.device.ui.DeviceView"/>
       <persistedState key="originalCompatibilityViewBundle" value="com.silabs.ss.platform.device.ui"/>
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
@@ -800,7 +800,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Uq-hEJRtEeyZ56az3EPEWg" elementId="org.eclipse.ui.workbench.file" toBeRendered="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_CzHF4JaJEeymA40y7VjwNQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_UrKr_pRtEeyZ56az3EPEWg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vfrtoJhaEeyoFticgmrUVA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_UrKr_pRtEeyZ56az3EPEWg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Uq-hIZRtEeyZ56az3EPEWg" elementId="group.edit" toBeRendered="false" visible="false">
         <tags>toolbarSeparator</tags>
@@ -831,7 +831,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Uq-hPpRtEeyZ56az3EPEWg" elementId="org.eclipse.ui.workbench.navigate" toBeRendered="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_C0HLcJaJEeymA40y7VjwNQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_UrKFYpRtEeyZ56az3EPEWg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vjyxkJhaEeyoFticgmrUVA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_UrKFYpRtEeyZ56az3EPEWg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Uq-hSZRtEeyZ56az3EPEWg" elementId="group.editor" toBeRendered="false" visible="false">
         <tags>toolbarSeparator</tags>

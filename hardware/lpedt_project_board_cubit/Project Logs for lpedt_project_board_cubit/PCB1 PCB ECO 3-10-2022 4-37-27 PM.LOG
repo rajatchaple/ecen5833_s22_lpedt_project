@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=MAG_ENC_B Pin=TP3-1
-Removed Pin From Net: NetName=MAG_ENC_A Pin=TP3-2
-Added Pin To Net: NetName=MAG_ENC_FD_B Pin=TP3-1
-Added Pin To Net: NetName=MAG_ENC_FD_A Pin=TP3-2

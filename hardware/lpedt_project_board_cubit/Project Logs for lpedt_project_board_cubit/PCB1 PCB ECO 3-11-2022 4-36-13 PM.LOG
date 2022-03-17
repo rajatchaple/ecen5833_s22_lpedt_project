@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=US2_RX Pin=TP4-1
-Removed Pin From Net: NetName=US2_TX Pin=TP4-2
-Removed Pin From Net: NetName=GND Pin=TP4-3
-Removed Member From Class: ClassName=ultrasonic_imu_sensor Member=TP4

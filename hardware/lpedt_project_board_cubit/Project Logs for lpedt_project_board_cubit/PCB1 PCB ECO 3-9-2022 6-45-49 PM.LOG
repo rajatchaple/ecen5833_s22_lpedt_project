@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=GND Pin=H4-2
-Removed Pin From Net: NetName=VOUT Pin=H5-3
-Removed Pin From Net: NetName=GND Pin=U5-2
-Removed Member From Class: ClassName=power_management Member=H4
-Removed Member From Class: ClassName=power_management Member=H5
-Removed Member From Class: ClassName=power_management Member=U5
-Added Pin To Net: NetName=VOUT Pin=H6-1
-Added Pin To Net: NetName=VOUT Pin=R16-2

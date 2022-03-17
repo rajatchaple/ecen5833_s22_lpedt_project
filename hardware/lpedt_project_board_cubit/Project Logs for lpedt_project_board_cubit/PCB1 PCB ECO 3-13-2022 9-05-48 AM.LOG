@@ -1,0 +1,5 @@
+Added Component: Designator=A1(F_ANTENNA_FOOTPRINT)
+Added Pin To Net: NetName=FEED Pin=A1-FEED
+Added Pin To Net: NetName=FEED Pin=A1-FEED
+Added Pin To Net: NetName=GND Pin=A1-GND
+Added Member To Class: ClassName=efr32_radio_interface Member=Component A1 F_ANT

@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=SW_UP Pin=H9-2
+Removed Pin From Net: NetName=SW_GO Pin=H9-4
+Removed Pin From Net: NetName=SW_DOWN Pin=H9-5
+Removed Pin From Net: NetName=SW_UP Pin=H10-2
+Removed Pin From Net: NetName=SW_GO Pin=H10-4
+Removed Pin From Net: NetName=SW_DOWN Pin=H10-5
+Added Pin To Net: NetName=SW_GO Pin=H9-2
+Added Pin To Net: NetName=SW_DOWN Pin=H9-4
+Added Pin To Net: NetName=SW_UP Pin=H9-5
+Added Pin To Net: NetName=SW_GO Pin=H10-2
+Added Pin To Net: NetName=SW_DOWN Pin=H10-4
+Added Pin To Net: NetName=SW_UP Pin=H10-5

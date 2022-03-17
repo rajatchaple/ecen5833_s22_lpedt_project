@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=VBAT_OK Pin=TP11-1
+Removed Pin From Net: NetName=GND Pin=TP11-2
+Removed Member From Class: ClassName=power_management Member=TP11
+Added Rule: Name=Schematic Width Constraint_2
+Added Rule: Name=Schematic Width Constraint_3
+Added Rule: Name=Schematic Width Constraint_4
+Added Rule: Name=Schematic Width Constraint_5
+Added Rule: Name=Schematic Width Constraint_6
+Added Rule: Name=Schematic Width Constraint_7
+Added Rule: Name=Schematic Width Constraint_8
+Added Rule: Name=Schematic Width Constraint_9
+Added Rule: Name=Schematic Width Constraint_10
+Added Rule: Name=Schematic Width Constraint_11
+Added Rule: Name=Schematic Width Constraint_12
+Added Rule: Name=Schematic Width Constraint_13
+Added Rule: Name=Schematic Width Constraint_14
+Added Rule: Name=Schematic Width Constraint_15
+Added Rule: Name=Schematic Width Constraint_16
+Added Rule: Name=Schematic Width Constraint_17
+Added Rule: Name=Schematic Width Constraint_18
+Added Rule: Name=Schematic Width Constraint_19
+Added Rule: Name=Schematic Width Constraint_20
+Added Rule: Name=Schematic Width Constraint_21
+Added Rule: Name=Schematic Width Constraint_22
+Added Rule: Name=Schematic Width Constraint_23
+Added Rule: Name=Schematic Width Constraint_24
+Added Rule: Name=Schematic Width Constraint_25
+Added Rule: Name=Schematic Width Constraint_26

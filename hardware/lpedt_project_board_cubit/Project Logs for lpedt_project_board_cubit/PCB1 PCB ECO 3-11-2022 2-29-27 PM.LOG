@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=LCD_PWR Pin=C1-1
+Removed Pin From Net: NetName=GND Pin=C1-2
+Removed Member From Class: ClassName=efr32_lcd_hmi Member=C1

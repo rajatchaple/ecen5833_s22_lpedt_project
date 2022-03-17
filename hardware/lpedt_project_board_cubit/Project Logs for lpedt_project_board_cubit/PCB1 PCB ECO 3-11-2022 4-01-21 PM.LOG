@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=ULTSEN_PWR Pin=C37-1
+Removed Pin From Net: NetName=GND Pin=C37-2
+Removed Pin From Net: NetName=ULTSEN_PWR Pin=C46-1
+Removed Pin From Net: NetName=GND Pin=C46-2
+Removed Member From Class: ClassName=ultrasonic_imu_sensor Member=C37
+Removed Member From Class: ClassName=ultrasonic_imu_sensor Member=C46

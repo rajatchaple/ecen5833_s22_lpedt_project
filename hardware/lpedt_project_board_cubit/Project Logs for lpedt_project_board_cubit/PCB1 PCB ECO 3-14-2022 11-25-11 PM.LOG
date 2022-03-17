@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=+3V2_VMCU_S Pin=H10-1
+Removed Pin From Net: NetName=SW_GO_S Pin=H10-2
+Removed Pin From Net: NetName=SW_BACK_S Pin=H10-3
+Removed Pin From Net: NetName=SW_DOWN_S Pin=H10-4
+Removed Pin From Net: NetName=SW_UP_S Pin=H10-5
+Removed Pin From Net: NetName=GND Pin=TP4-1
+Removed Member From Class: ClassName=efr32_lcd_hmi Member=H10
+Removed Member From Class: ClassName=efr32_lcd_hmi Member=TP4
+Added Component: Designator=H5(6_PIN_100MIL)
+Added Pin To Net: NetName=+3V2_VMCU_S Pin=H5-1
+Added Pin To Net: NetName=SW_GO_S Pin=H5-2
+Added Pin To Net: NetName=SW_BACK_S Pin=H5-3
+Added Pin To Net: NetName=SW_DOWN_S Pin=H5-4
+Added Pin To Net: NetName=SW_UP_S Pin=H5-5
+Added Pin To Net: NetName=GND Pin=H5-6
+Added Member To Class: ClassName=efr32_lcd_hmi Member=Component H5 6_pin_connector

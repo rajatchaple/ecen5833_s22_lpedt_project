@@ -1,0 +1,10 @@
+Output: WireList Netlist
+Type  : WireListNetlist
+From  : Project [lpedt_project_board_cubit.PrjPcb]
+   Generated File[lpedt_project_board_cubit.NET]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 3:20:16 PM On 3/1/2022

@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=LCD_PWR Pin=LCD1-1
+Removed Pin From Net: NetName=GND Pin=LCD1-2
+Removed Pin From Net: NetName=SPI_CLK Pin=LCD1-3
+Removed Pin From Net: NetName=SPI_MOSI Pin=LCD1-4
+Removed Pin From Net: NetName=LCD_CS Pin=LCD1-5
+Removed Pin From Net: NetName=LCD_EXTCOM Pin=LCD1-6
+Removed Member From Class: ClassName=efr32_lcd_hmi Member=LCD1
+Added Component: Designator=LCD?(6_PIN_100MIL)
+Add component (AddParameter): Name = "Background Color"; Value = "Grey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Audio / Video Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://cdn-learn.adafruit.com/downloads/pdf/adafruit-sharp-memory-display-breakout.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://cdn-learn.adafruit.com/downloads/pdf/adafruit-sharp-memory-display-breakout.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Display Type"; Value = "LCD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Adafruit Industries"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "3502"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=24.95000 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resolution (height)"; Value = "168pixel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resolution (width)"; Value = "144pixel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=LCD_PWR Pin=LCD?-1
+Added Pin To Net: NetName=GND Pin=LCD?-2
+Added Pin To Net: NetName=SPI_CLK Pin=LCD?-3
+Added Pin To Net: NetName=SPI_MOSI Pin=LCD?-4
+Added Pin To Net: NetName=LCD_CS Pin=LCD?-5
+Added Pin To Net: NetName=LCD_EXTCOM Pin=LCD?-6
+Added Member To Class: ClassName=efr32_lcd_hmi Member=Component LCD? SHARP MEMORY Adafruit

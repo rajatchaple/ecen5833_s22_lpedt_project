@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=US2_TX Pin=U13-1
+Removed Pin From Net: NetName=US2_RX Pin=U13-2
+Removed Pin From Net: NetName=ULTSEN_PWR Pin=U13-3
+Removed Pin From Net: NetName=GND Pin=U13-4
+Removed Member From Class: ClassName=ultrasonic_imu_sensor Member=U13
+Added Component: Designator=U9(4_PIN_100MIL)
+Added Pin To Net: NetName=US2_TX Pin=U9-1
+Added Pin To Net: NetName=US2_RX Pin=U9-2
+Added Pin To Net: NetName=ULTSEN_PWR Pin=U9-3
+Added Pin To Net: NetName=GND Pin=U9-4
+Added Member To Class: ClassName=ultrasonic_imu_sensor Member=Component U9 Ultrasonic Sensor

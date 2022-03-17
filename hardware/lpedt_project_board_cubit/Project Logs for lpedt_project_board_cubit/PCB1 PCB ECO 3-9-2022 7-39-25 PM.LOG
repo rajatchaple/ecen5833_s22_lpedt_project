@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=GND Pin=TP5-1
+Removed Member From Class: ClassName=efr32_ioport Member=TP5

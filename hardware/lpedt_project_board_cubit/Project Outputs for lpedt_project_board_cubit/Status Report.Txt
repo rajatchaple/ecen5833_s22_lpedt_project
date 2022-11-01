@@ -1,10 +1,14 @@
-Output: WireList Netlist
-Type  : WireListNetlist
+Output: NC Drill Files
+Type  : NC Drill
 From  : Project [lpedt_project_board_cubit.PrjPcb]
-   Generated File[lpedt_project_board_cubit.NET]
+   Generated File[PCB1-RoundHoles.TXT]
+   Generated File[PCB1-SlotHoles.TXT]
+   Generated File[PCB1.DRL]
+   Generated File[PCB1.LDP]
+   Generated File[PCB1.DRR]
 
 
-Files Generated   : 1
+Files Generated   : 5
 Documents Printed : 0
 
-Finished Output Generation At 3:20:16 PM On 3/1/2022
+Finished Output Generation At 4:05:36 PM On 4/6/2022

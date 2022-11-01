@@ -13,6 +13,7 @@
 
 #include "app.h"
 #include "src/timers.h"
+#include "em_letimer.h"
 
 //resolution of LETIMER clock tick
 
@@ -30,7 +31,7 @@
 //structure to define parameters for LETIMER
 const LETIMER_Init_TypeDef LETIMER_INIT_STRUCT = {
     false,              /* Disable timer when initialization completes. */
-    false,              /* Allow counter to run during debug halt. */
+    true,              /* Allow counter to run during debug halt. */
     true,               /* load COMP0 into CNT on underflow. */
     false,              /* Do not load COMP1 into COMP0 when REP0 reaches 0. */
     0,                  /* Idle value 0 for output 0. */
@@ -48,12 +49,13 @@ void mytimer_init() {
   LETIMER_Enable(LETIMER0, true);                       //Enable LETIMER0
 
   //enable underflow interrupt of timer peripheral
-  LETIMER_IntEnable(LETIMER0, LETIMER_IEN_UF);
+//  LETIMER_IntEnable(LETIMER0, LETIMER_IEN_UF);
 
 }
 
 //interrupt based delay of at least us_wait microseconds, using LETIMER0 tick counts as a reference
 void timerWaitUs_interrupt(uint32_t us_wait) {
+#if 0
   uint16_t desired_tick, current_cnt, required_cnt;
 
   //check function argument range
@@ -89,10 +91,32 @@ void timerWaitUs_interrupt(uint32_t us_wait) {
   LETIMER_CompareSet(LETIMER0, 1, required_cnt); //Set value of COMP1
 
   //enable COMP1 interrupt of timer peripheral
-  LETIMER_IntEnable(LETIMER0, LETIMER_IEN_COMP1);
+
 
   LETIMER0->IEN |= LETIMER_IEN_COMP1;
 
+#else
+  uint32_t delay_in_counts = 0;
+  uint32_t initial_counter_value = 0;
+  uint32_t expected_counter_after_delay = 0;
+
+  //Range check for input value
+  if((us_wait/1000) > MAX_WAIT) //checking if us_wait in milliseconds is lesser than allowed limit
+  {
+    //seting delay to default value which is 80000 i.e. 80 msec
+    us_wait = 80000; //This default value is to be decided based on application
+    LOG_WARN("Requested delay is more than allowed limit. Program may misbehave. Default delay of %d us set", us_wait);
+  }
+
+  delay_in_counts = (us_wait*ACTUAL_CLK_FREQ)/1000000;
+  initial_counter_value = LETIMER_CounterGet(LETIMER0);
+
+  //Handling rollover using VALUE_TO_LOAD_COUNTER
+  expected_counter_after_delay = (VALUE_TO_LOAD_COMP0 + initial_counter_value - delay_in_counts) % VALUE_TO_LOAD_COMP0;
+  LETIMER_CompareSet(LETIMER0, 1, expected_counter_after_delay);
+
+  LETIMER_IntEnable(LETIMER0, LETIMER_IEN_COMP1);
+#endif
 }
 
 

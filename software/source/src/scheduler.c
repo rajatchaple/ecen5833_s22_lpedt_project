@@ -10,11 +10,17 @@
 #include "src/log.h"
 
 #include "app.h"
+#include "stdint.h"
 #include "src/scheduler.h"
+#include "src/ultrasonic.h"
+#include "src/lcd_menu.h"
 
-uint32_t MyEvent;
+//uint32_t MyEvent;
+static uint32_t event_status  = 0x00000000;
 
 extern uint32_t encoder_pulses_A;
+
+extern mag_enc_t mag_enc;
 extern mode;
 
 sl_status_t rc=0;
@@ -35,33 +41,15 @@ static const uint8_t button_char[16] = { 0x89, 0x62, 0x13, 0x2d, 0x2a, 0x65, 0xe
 
 #endif
 
-//enum for interrupt based events
-enum {
-  evt_NoEvent=0,
-  evt_TimerUF,
-  evt_COMP1,
-  evt_TransferDone,
-  evt_ButtonPressed,
-  evt_ButtonReleased,
-};
 
-//enum to define scheduler events
-typedef enum uint32_t {
-  state0_idle,
-  state1_timer_wait,
-  state2_write_cmd,
-  state3_write_wait,
-  state4_read,
-  state0_idle_client,
-  state0_get_another_service,
-  state1_got_services,
-  state1_got_another_services,
-  state2_got_char,
-  state2_got_another_char,
-  state3_set_indication,
-  state4_wait_for_close,
-  MY_NUM_STATES,
-}my_state;
+
+sensor_data_t sensor_data = {false, false, false, false, false, false, false, 0, 0, 0, 0, 0, 0, 0};
+
+
+sensor_data_t* get_sensor_data()
+{
+  return &sensor_data;
+}
 
 extern uint32_t letimer_uf_count;
 // scheduler routine to set a scheduler event
@@ -79,45 +67,140 @@ void schedulerSetEventUF() {
   // exit critical section
   CORE_EXIT_CRITICAL();
 
-  if(mode == 0) //IMU
-    {
-      //read imu data and print it
-      //LOG_INFO("printing IMU data\n\r");
-      imu_read_angle();
-      displayPrintf(DISPLAY_ROW_NAME, "Server");
-//      displayUpdate();
+//  int dist=0;
+//  while(dist == 0)
+//  {dist = get_processed_data_from_ultrasonic_sensor();}
+//  //if(distance != 0)
+//    {
+//      //log
+//      LOG_INFO("Dist = %d\n\r", dist);
+//
+////      distance = 100;
+//    }
 
-    }
-  else if(mode == 1) //Rangefinder
-    {
-      //read rangefinder data and print it
-      LOG_INFO("printing RangeFinder data\n\r");
+//  displayPrintf(DISPLAY_ROW_NAME, "Server");
+//
+//  if(mode == 0) //IMU
+//    {
+//      //read imu data and print it
+//      //LOG_INFO("printing IMU data\n\r");
+//      //imu_read_angle();
 //      displayPrintf(DISPLAY_ROW_NAME, "Server");
-//      displayUpdate();
-
-    }
-  else if(mode == 2) //magnetic encoder
-    {
-      LOG_INFO("Count=%d\n\r", encoder_pulses_A);
-//      displayPrintf(DISPLAY_ROW_NAME, "Server");
-//      displayUpdate();
-
-//      displayPrintf(DISPLAY_ROW_NAME, "Server");
-    }
+////      displayUpdate();
+//
+//    }
+//  else if(mode == 1) //Rangefinder
+//    {
+//      //read rangefinder data and print it
+//      LOG_INFO("printing RangeFinder data\n\r");
+////      displayPrintf(DISPLAY_ROW_NAME, "Server");
+////      displayUpdate();
+//
+//    }
+//  else if(mode == 2) //magnetic encoder
+//    {
+//      LOG_INFO("Count=%d\n\r", encoder_pulses_A);
+////      displayPrintf(DISPLAY_ROW_NAME, "Server");
+////      displayUpdate();
+//
+////      displayPrintf(DISPLAY_ROW_NAME, "Server");
+//    }
 
 
 } // schedulerSetEventXXX()
 
+
+void schedulerSetEventCOMP1()
+{
+  // enter critical section
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();
+
+  //sl_bt_external_signal(evt_COMP1);
+
+  // set the event in your data structure, this is a read-modify-write
+  event_status |= evt_COMP1;
+
+  // exit critical section
+  CORE_EXIT_CRITICAL();
+}
+
 // scheduler routine to set a scheduler event
-void schedulerSetEventCOMP1() {
+void schedulerSetEventButtonUp() {
+  // enter critical section
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();
+
+//  sl_bt_external_signal(evt_Button_UP);
+//  handle_lcd_menus(evt_Button_UP);
+  // set the event in your data structure, this is a read-modify-write
+  event_status |= evt_Button_UP;
+
+  // exit critical section
+  CORE_EXIT_CRITICAL();
+
+} // schedulerSetEventXXX()
+
+// scheduler routine to set a scheduler event
+void schedulerSetEventButtonBack() {
 
   // enter critical section
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();
 
-  sl_bt_external_signal(evt_COMP1);
+//  sl_bt_external_signal(evt_Button_BACK);
+//  handle_lcd_menus(evt_Button_BACK);
   // set the event in your data structure, this is a read-modify-write
-  //MyEvent |= evt_COMP1;
+  event_status |= evt_Button_BACK;
+
+  // exit critical section
+  CORE_EXIT_CRITICAL();
+
+} // schedulerSetEventXXX()
+
+// scheduler routine to set a scheduler event
+void schedulerSetEventButtonSelect() {
+
+  // enter critical section
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();
+
+//  sl_bt_external_signal(evt_Button_SELECT);
+//  handle_lcd_menus(evt_Button_SELECT);
+
+//  if(mag_enc.clkwise_counter > mag_enc.counter_clkwise_counter)
+//    LOG_INFO("Direction=clkwise\n\r");
+//  else
+//    LOG_INFO("Direction=counter_clkwise\n\r");
+  // set the event in your data structure, this is a read-modify-write
+  event_status |= evt_Button_SELECT;
+
+  // exit critical section
+  CORE_EXIT_CRITICAL();
+
+} // schedulerSetEventXXX()
+
+//void schedulerTempFunction() {
+//  //This function to be moved to getNextEvent
+//
+//  uint64_t value;
+//  value = (abs(mag_enc.clkwise_counter - mag_enc.counter_clkwise_counter)*22.7/10); //1 pulse corresponds to 0.227mm (1024 pulses correspond to 2*pi*37mm... multiplied by 100 to improve resolution
+//  //  printf("Counter=%d.%d cm\t\t", (uint32_t)value/100, (uint32_t)value%100);
+//
+//
+//}
+
+// scheduler routine to set a scheduler event
+void schedulerSetEventButtonDown() {
+
+  // enter critical section
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();
+
+//  sl_bt_external_signal(evt_Button_DOWN);
+//  handle_lcd_menus(evt_Button_DOWN);
+  // set the event in your data structure, this is a read-modify-write
+  event_status |= evt_Button_DOWN;
 
   // exit critical section
   CORE_EXIT_CRITICAL();
@@ -131,201 +214,239 @@ void schedulerSetEventTransferDone() {
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();
 
-  sl_bt_external_signal(evt_TransferDone);
+//  sl_bt_external_signal(evt_TransferDone);
   // set the event in your data structure, this is a read-modify-write
-  //MyEvent |= evt_TransferDone;
+  event_status |= evt_TransferDone;
 
   // exit critical section
   CORE_EXIT_CRITICAL();
 
 } // schedulerSetEventXXX()
+
 
 // scheduler routine to set a scheduler event
-void schedulerSetEventButtonPressed() {
+void schedulerSetEventRetryTransfer() {
 
   // enter critical section
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();
 
-  sl_bt_external_signal(evt_ButtonPressed);
+//  sl_bt_external_signal(evt_TransferDone);
   // set the event in your data structure, this is a read-modify-write
+  event_status |= evt_retry;
 
   // exit critical section
   CORE_EXIT_CRITICAL();
 
 } // schedulerSetEventXXX()
+
 
 // scheduler routine to set a scheduler event
-void schedulerSetEventButtonReleased() {
+void schedulerSetEventStartNextImuReading() {
 
   // enter critical section
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();
 
-  sl_bt_external_signal(evt_ButtonReleased);
+//  sl_bt_external_signal(evt_start_next_imu_measurement);
   // set the event in your data structure, this is a read-modify-write
+  event_status |= evt_start_next_imu_measurement;
 
   // exit critical section
   CORE_EXIT_CRITICAL();
 
 } // schedulerSetEventXXX()
 
-// scheduler routine to return 1 event to main()code and clear that event
-uint32_t getNextEvent() {
 
-  static uint32_t theEvent=evt_NoEvent;
 
-  //determine 1 event to return to main() code, apply priorities etc.
-  // clear the event in your data structure, this is a read-modify-write
+//// scheduler routine to return 1 event to main()code and clear that event
+//uint32_t getNextEvent() {
+//
+//  static uint32_t theEvent=evt_NoEvent;
+//
+//  //determine 1 event to return to main() code, apply priorities etc.
+//  // clear the event in your data structure, this is a read-modify-write
+//  // enter critical section
+//  CORE_DECLARE_IRQ_STATE;
+//  CORE_ENTER_CRITICAL();
+//
+//  if(MyEvent & evt_TimerUF) {
+//      theEvent = evt_TimerUF;
+//      MyEvent ^= evt_TimerUF;
+//  }
+//  else if(MyEvent & evt_COMP1) {
+//      theEvent = evt_COMP1;
+//      MyEvent ^= evt_COMP1;
+//  }
+//  else if(MyEvent & evt_TransferDone) {
+//      theEvent = evt_TransferDone;
+//      MyEvent ^= evt_TransferDone;
+//  }
+//
+//  // exit critical section
+//  CORE_EXIT_CRITICAL();
+//
+//  return (theEvent);
+//} // getNextEvent()
+
+
+
+/** -------------------------------------------------------------------------------------------
+ * @brief scheduler routine to return 1 event to main()
+ *
+ * @param None
+ * @return theEvent : returns status of events
+ *-------------------------------------------------------------------------------------------- **/
+uint32_t getNextEvent()
+{
+  uint32_t theEvent;
+  // determine 1 event to return to main()
+  for(uint32_t i=1; i<=LAST_EVENT_IN_THE_LIST; i<<=1)
+  {
+    if(i & event_status)
+    {
+      theEvent = i;
+      break;
+    }
+  }
+
   // enter critical section
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();
-
-  if(MyEvent & evt_TimerUF) {
-      theEvent = evt_TimerUF;
-      MyEvent ^= evt_TimerUF;
-  }
-  else if(MyEvent & evt_COMP1) {
-      theEvent = evt_COMP1;
-      MyEvent ^= evt_COMP1;
-  }
-  else if(MyEvent & evt_TransferDone) {
-      theEvent = evt_TransferDone;
-      MyEvent ^= evt_TransferDone;
-  }
-
+  // clear the event
+  event_status &= ~theEvent;//~(LETIMER_UF_INTERRUPT_EVENT);
   // exit critical section
   CORE_EXIT_CRITICAL();
-
   return (theEvent);
-} // getNextEvent()
+} // get_event()
+
 
 #if DEVICE_IS_BLE_SERVER
-//for server only
-//state machine to be executed
-void temperature_state_machine(sl_bt_msg_t *evt) {
-
-  my_state currentState;
-  static my_state nextState = state0_idle;
-  ble_data_struct_t *bleData = getBleDataPtr();
-
-  if((SL_BT_MSG_ID(evt->header)==sl_bt_evt_system_external_signal_id)
-      && (bleData->connected==true)
-      && (bleData->indication==true)) {
-
-      currentState = nextState;     //set current state of the process
-
-      switch(currentState) {
-
-        case state0_idle:
-          nextState = state0_idle;          //default
-
-          //check for underflow event
-          if(evt->data.evt_system_external_signal.extsignals == evt_TimerUF) {
-
-              //LOG_INFO("timerUF event\n\r");
-              //enable temperature sensor
-              //enable_sensor();
-
-              //wait for 80ms for sensor to power on
-              timerWaitUs_interrupt(80000);
-
-              nextState = state1_timer_wait;
-          }
-
-          break;
-
-        case state1_timer_wait:
-          nextState = state1_timer_wait;    //default
-
-          //check for COMP1 event after timerwait
-          if(evt->data.evt_system_external_signal.extsignals == evt_COMP1) {
-
-              //LOG_INFO("Comp1 event\n\r");
-
-              //set the processor in EM1 energy mode
-              sl_power_manager_add_em_requirement(SL_POWER_MANAGER_EM1);
-
-              //send write command to slave
-              write_cmd();
-
-              nextState = state2_write_cmd;
-          }
-
-          break;
-
-        case state2_write_cmd:
-          nextState = state2_write_cmd;     //default
-
-          //check for I2C transfer complete event after writing command to slave
-          if(evt->data.evt_system_external_signal.extsignals == evt_TransferDone) {
-
-              //LOG_INFO("write transfer done\n\r");
-              //remove processor from EM1 energy mode
-              sl_power_manager_remove_em_requirement(SL_POWER_MANAGER_EM1);
-
-              //wait 10.8ms for measurement of temperature
-              timerWaitUs_interrupt(10800);
-
-              nextState = state3_write_wait;
-          }
-
-          break;
-
-        case state3_write_wait:
-          nextState = state3_write_wait;    //default
-
-          //check for COMP1 event after timerwait
-          if(evt->data.evt_system_external_signal.extsignals == evt_COMP1) {
-
-              //read data from sensor
-              read_cmd();
-
-              //set the processor in EM1 energy mode
-              sl_power_manager_add_em_requirement(SL_POWER_MANAGER_EM1);
-
-              nextState = state4_read;
-          }
-
-          break;
-
-        case state4_read:
-          nextState = state4_read;          //default
-
-          //check for I2C transfer complete event after reading data from slave
-          if(evt->data.evt_system_external_signal.extsignals == evt_TransferDone) {
-
-              //LOG_INFO("read transfer  done\n\r");
-              //remove processor from EM1 energy mode
-              sl_power_manager_remove_em_requirement(SL_POWER_MANAGER_EM1);
-
-              //disable si7021 sensor
-              //disable_sensor();
-
-              //disable I2C interrupt
-              NVIC_DisableIRQ(I2C0_IRQn);
-
-              //log temperature value
-              //LOG_INFO("Temp = %f C\n\r", convertTemp());
-
-              //send temperature indication to client
-              ble_SendTemp();
-
-              nextState = state0_idle;
-          }
-
-          break;
-
-        default:
-
-          LOG_ERROR("Should not be here in state machine\n\r");
-
-          break;
-      }
-
-  }
-  return;
-}
+////for server only
+////state machine to be executed
+//void temperature_state_machine(sl_bt_msg_t *evt) {
+//
+//  my_state currentState;
+//  static my_state nextState = state0_idle;
+//  ble_data_struct_t *bleData = getBleDataPtr();
+//
+//  if((SL_BT_MSG_ID(evt->header)==sl_bt_evt_system_external_signal_id)
+//      && (bleData->connected==true)
+//      && (bleData->indication==true)) {
+//
+//      currentState = nextState;     //set current state of the process
+//
+//      switch(currentState) {
+//
+//        case state0_idle:
+//          nextState = state0_idle;          //default
+//
+//          //check for underflow event
+//          if(evt->data.evt_system_external_signal.extsignals == evt_TimerUF) {
+//
+//              //LOG_INFO("timerUF event\n\r");
+//              //enable temperature sensor
+//              //enable_sensor();
+//
+//              //wait for 80ms for sensor to power on
+//              timerWaitUs_interrupt(80000);
+//
+//              nextState = state1_timer_wait;
+//          }
+//
+//          break;
+//
+//        case state1_timer_wait:
+//          nextState = state1_timer_wait;    //default
+//
+//          //check for COMP1 event after timerwait
+//          if(evt->data.evt_system_external_signal.extsignals == evt_COMP1) {
+//
+//              //LOG_INFO("Comp1 event\n\r");
+//
+//              //set the processor in EM1 energy mode
+//              sl_power_manager_add_em_requirement(SL_POWER_MANAGER_EM1);
+//
+//              //send write command to slave
+//              write_cmd();
+//
+//              nextState = state2_write_cmd;
+//          }
+//
+//          break;
+//
+//        case state2_write_cmd:
+//          nextState = state2_write_cmd;     //default
+//
+//          //check for I2C transfer complete event after writing command to slave
+//          if(evt->data.evt_system_external_signal.extsignals == evt_TransferDone) {
+//
+//              //LOG_INFO("write transfer done\n\r");
+//              //remove processor from EM1 energy mode
+//              sl_power_manager_remove_em_requirement(SL_POWER_MANAGER_EM1);
+//
+//              //wait 10.8ms for measurement of temperature
+//              timerWaitUs_interrupt(10800);
+//
+//              nextState = state3_write_wait;
+//          }
+//
+//          break;
+//
+//        case state3_write_wait:
+//          nextState = state3_write_wait;    //default
+//
+//          //check for COMP1 event after timerwait
+//          if(evt->data.evt_system_external_signal.extsignals == evt_COMP1) {
+//
+//              //read data from sensor
+//              read_cmd();
+//
+//              //set the processor in EM1 energy mode
+//              sl_power_manager_add_em_requirement(SL_POWER_MANAGER_EM1);
+//
+//              nextState = state4_read;
+//          }
+//
+//          break;
+//
+//        case state4_read:
+//          nextState = state4_read;          //default
+//
+//          //check for I2C transfer complete event after reading data from slave
+//          if(evt->data.evt_system_external_signal.extsignals == evt_TransferDone) {
+//
+//              //LOG_INFO("read transfer  done\n\r");
+//              //remove processor from EM1 energy mode
+//              sl_power_manager_remove_em_requirement(SL_POWER_MANAGER_EM1);
+//
+//              //disable si7021 sensor
+//              //disable_sensor();
+//
+//              //disable I2C interrupt
+//              NVIC_DisableIRQ(I2C0_IRQn);
+//
+//              //log temperature value
+//              //LOG_INFO("Temp = %f C\n\r", convertTemp());
+//
+//              //send temperature indication to client
+//              ble_SendTemp();
+//
+//              nextState = state0_idle;
+//          }
+//
+//          break;
+//
+//        default:
+//
+//          LOG_ERROR("Should not be here in state machine\n\r");
+//
+//          break;
+//      }
+//
+//  }
+//  return;
+//}
 
 #else
 

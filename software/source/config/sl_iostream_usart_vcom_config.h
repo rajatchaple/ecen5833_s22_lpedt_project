@@ -69,7 +69,7 @@
 // <q SL_IOSTREAM_USART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF> Convert \n to \r\n
 // <i> It can be changed at runtime using the C API.
 // <i> Default: 0
-#define SL_IOSTREAM_USART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF     0
+#define SL_IOSTREAM_USART_VCOM_CONVERT_BY_DEFAULT_LF_TO_CRLF     1
 
 // <q SL_IOSTREAM_USART_VCOM_RESTRICT_ENERGY_MODE_TO_ALLOW_RECEPTION> Restrict the energy mode to allow the reception.
 // <i> Default: 1
@@ -86,25 +86,16 @@
 #define SL_IOSTREAM_USART_VCOM_PERIPHERAL        USART0
 #define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO     0
 
-// USART0 TX on PA0
-#define SL_IOSTREAM_USART_VCOM_TX_PORT           gpioPortA
-#define SL_IOSTREAM_USART_VCOM_TX_PIN            0
-#define SL_IOSTREAM_USART_VCOM_TX_LOC            0
+// USART0 TX on PF4
+#define SL_IOSTREAM_USART_VCOM_TX_PORT           gpioPortF
+#define SL_IOSTREAM_USART_VCOM_TX_PIN            4
+#define SL_IOSTREAM_USART_VCOM_TX_LOC            28
 
-// USART0 RX on PA1
-#define SL_IOSTREAM_USART_VCOM_RX_PORT           gpioPortA
-#define SL_IOSTREAM_USART_VCOM_RX_PIN            1
-#define SL_IOSTREAM_USART_VCOM_RX_LOC            0
+// USART0 RX on PF3
+#define SL_IOSTREAM_USART_VCOM_RX_PORT           gpioPortF
+#define SL_IOSTREAM_USART_VCOM_RX_PIN            3
+#define SL_IOSTREAM_USART_VCOM_RX_LOC            26
 
-// USART0 CTS on PA2
-#define SL_IOSTREAM_USART_VCOM_CTS_PORT          gpioPortA
-#define SL_IOSTREAM_USART_VCOM_CTS_PIN           2
-#define SL_IOSTREAM_USART_VCOM_CTS_LOC           30
-
-// USART0 RTS on PA3
-#define SL_IOSTREAM_USART_VCOM_RTS_PORT          gpioPortA
-#define SL_IOSTREAM_USART_VCOM_RTS_PIN           3
-#define SL_IOSTREAM_USART_VCOM_RTS_LOC           30
 // [USART_SL_IOSTREAM_USART_VCOM]$
 // <<< sl:end pin_tool >>>
 

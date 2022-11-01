@@ -9,7 +9,7 @@
 #define SRC_OSCILLATORS_H_
 
 #include "em_cmu.h"
-#include "main.h"
+#include "../main.h"
 
 //Function to get the actual frequency of the oscillator after dividing prescaler
 // No parameters

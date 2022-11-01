@@ -1,4 +1,4 @@
-/*
+/*o
  * i2c.h
  *
  *  Created on: Sep 16, 2021
@@ -8,9 +8,9 @@
 #ifndef SRC_I2C_H_
 #define SRC_I2C_H_
 
-#include "src/timers.h"
-#include "src/oscillators.h"
-#include "src/gpio.h"
+#include "timers.h"
+#include "oscillators.h"
+#include "gpio.h"
 #include "app.h"
 
 #include "em_letimer.h"
@@ -22,6 +22,9 @@
 //function to initialize I2C peripheral
 void i2c_init();
 
+//function to deinitialize I2C peripheral
+void i2c_deinit();
+
 //function to convert data in temperature value
 float convertTemp();
 
@@ -32,7 +35,7 @@ void i2c_write(uint8_t address, uint8_t cmd);
 
 I2C_TransferReturn_TypeDef i2c_write_write(uint8_t address, uint8_t reg, uint8_t value);
 I2C_TransferReturn_TypeDef i2c_read(uint8_t address, uint8_t* data_buffer);
-I2C_TransferReturn_TypeDef i2c_write_read(uint8_t address, uint8_t reg, uint8_t* data_read_from_imu);
+I2C_TransferReturn_TypeDef i2c_write_read(uint8_t address, uint8_t reg);
 
 
 //function to read temperature from sensor

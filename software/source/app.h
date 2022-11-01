@@ -61,6 +61,8 @@
 #include "src/scheduler.h"
 #include "src/i2c.h"
 #include "src/ble.h"
+#include "src/imu.h"
+
 
 // #defines to select energy mode
 //#define LOWEST_ENERGY_MODE 0

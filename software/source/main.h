@@ -37,8 +37,10 @@
 #include "sl_system_process_action.h"
 #endif // SL_CATALOG_KERNEL_PRESENT
 
+// for extra LOG_***() prints
+#define DEBUG1 1
 
-
+//#define HS_EVENT_LOGGING 1
 
 
 

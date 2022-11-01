@@ -8,11 +8,11 @@
 #ifndef SRC_IRQ_H_
 #define SRC_IRQ_H_
 
-#include "src/timers.h"
-#include "src/oscillators.h"
-#include "src/gpio.h"
-#include "src/scheduler.h"
-#include "app.h"
+#include "timers.h"
+#include "oscillators.h"
+#include "gpio.h"
+#include "scheduler.h"
+#include "../app.h"
 
 #include "em_letimer.h"
 #include "sl_i2cspm.h"

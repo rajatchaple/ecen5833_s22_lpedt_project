@@ -14,10 +14,18 @@
 // [CMU]$
 
 // $[DBG]
-// DBG SWV on PF2
-#define DBG_SWV_PORT                             gpioPortF
-#define DBG_SWV_PIN                              2
-#define DBG_SWV_LOC                              0
+// DBG SWCLKTCK on PF0
+#define DBG_SWCLKTCK_PORT                        gpioPortF
+#define DBG_SWCLKTCK_PIN                         0
+#define DBG_ROUTE_LOC                            0
+
+// DBG SWDIOTMS on PF1
+#define DBG_SWDIOTMS_PORT                        gpioPortF
+#define DBG_SWDIOTMS_PIN                         1
+
+// DBG TDO on PF2
+#define DBG_TDO_PORT                             gpioPortF
+#define DBG_TDO_PIN                              2
 
 // [DBG]$
 
@@ -25,31 +33,21 @@
 // [ETM]$
 
 // $[PTI]
-// PTI DFRAME on PB13
-#define PTI_DFRAME_PORT                          gpioPortB
-#define PTI_DFRAME_PIN                           13
-#define PTI_DFRAME_LOC                           6
-
-// PTI DOUT on PB12
-#define PTI_DOUT_PORT                            gpioPortB
-#define PTI_DOUT_PIN                             12
-#define PTI_DOUT_LOC                             6
-
 // [PTI]$
 
 // $[GPIO]
 // [GPIO]$
 
 // $[I2C0]
-// I2C0 SCL on PC10
+// I2C0 SCL on PC11
 #define I2C0_SCL_PORT                            gpioPortC
-#define I2C0_SCL_PIN                             10
-#define I2C0_SCL_LOC                             14
+#define I2C0_SCL_PIN                             11
+#define I2C0_SCL_LOC                             15
 
-// I2C0 SDA on PC11
+// I2C0 SDA on PC10
 #define I2C0_SDA_PORT                            gpioPortC
-#define I2C0_SDA_PIN                             11
-#define I2C0_SDA_LOC                             16
+#define I2C0_SDA_PIN                             10
+#define I2C0_SDA_LOC                             15
 
 // [I2C0]$
 
@@ -66,6 +64,14 @@
 // [LEUART0]$
 
 // $[LFXO]
+// LFXO N on PB14
+#define LFXO_N_PORT                              gpioPortB
+#define LFXO_N_PIN                               14
+
+// LFXO P on PB15
+#define LFXO_P_PORT                              gpioPortB
+#define LFXO_P_PIN                               15
+
 // [LFXO]$
 
 // $[MODEM]
@@ -117,25 +123,15 @@
 // [TIMER1]$
 
 // $[USART0]
-// USART0 CTS on PA2
-#define USART0_CTS_PORT                          gpioPortA
-#define USART0_CTS_PIN                           2
-#define USART0_CTS_LOC                           30
+// USART0 RX on PF3
+#define USART0_RX_PORT                           gpioPortF
+#define USART0_RX_PIN                            3
+#define USART0_RX_LOC                            26
 
-// USART0 RTS on PA3
-#define USART0_RTS_PORT                          gpioPortA
-#define USART0_RTS_PIN                           3
-#define USART0_RTS_LOC                           30
-
-// USART0 RX on PA1
-#define USART0_RX_PORT                           gpioPortA
-#define USART0_RX_PIN                            1
-#define USART0_RX_LOC                            0
-
-// USART0 TX on PA0
-#define USART0_TX_PORT                           gpioPortA
-#define USART0_TX_PIN                            0
-#define USART0_TX_LOC                            0
+// USART0 TX on PF4
+#define USART0_TX_PORT                           gpioPortF
+#define USART0_TX_PIN                            4
+#define USART0_TX_LOC                            28
 
 // [USART0]$
 
@@ -144,6 +140,11 @@
 #define USART1_CLK_PORT                          gpioPortC
 #define USART1_CLK_PIN                           8
 #define USART1_CLK_LOC                           11
+
+// USART1 RX on PC7
+#define USART1_RX_PORT                           gpioPortC
+#define USART1_RX_PIN                            7
+#define USART1_RX_LOC                            11
 
 // USART1 TX on PC6
 #define USART1_TX_PORT                           gpioPortC

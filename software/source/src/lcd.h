@@ -61,6 +61,10 @@ enum display_row {
 // The number of characters per row
 #define DISPLAY_ROW_LEN      20
 
+#define NO_RECTANGLE (-1)
+#define RECTANGLE1  (0)
+#define RECTANGLE2  (29)
+#define RECTANGLE3  (59)
 
 
 // function prototypes
@@ -68,8 +72,13 @@ enum display_row {
 void displayInit();
 void displayUpdate();
 void displayPrintf(enum display_row row, const char *format, ...);
+void displayUnit(enum display_row row, const char *format, ...);
 
-void draw_custom_graphics(GLIB_Context_t *pContext);
+//void draw_custom_graphics(GLIB_Context_t *pContext);
+void draw_custom_graphics(const char* screen, int rectangle_number);
+char* reverse(char *s);
+//void draw_custom_graphics_rectangle(int);
+void clear_display(void);
 
 
 

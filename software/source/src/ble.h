@@ -8,7 +8,7 @@
 #ifndef SRC_BLE_H_
 #define SRC_BLE_H_
 
-#include "src/timers.h"
+#include "timers.h"
 #include "src/oscillators.h"
 #include "src/gpio.h"
 #include "src/i2c.h"
@@ -19,6 +19,7 @@
 #include "sl_i2cspm.h"
 #include "em_i2c.h"
 #include "main.h"
+#include "lcd_menu.h"
 
 #define UINT8_TO_BITSTREAM(p, n)      { *(p)++ = (uint8_t)(n); }
 #define UINT32_TO_BITSTREAM(p, n)     { *(p)++ = (uint8_t)(n); *(p)++ = (uint8_t)((n) >> 8); \
@@ -41,6 +42,68 @@ struct buffer_entry
   uint8_t buffer[5];
 };
 
+//typedef struct {
+//
+//  // values that are common to servers and clients
+//
+//  //server address
+//  bd_addr myAddress;
+//  uint8_t myAddressType;
+//
+//  // values unique for server
+//
+//  // The advertising set handle allocated from Bluetooth stack.
+//  uint8_t advertisingSetHandle;
+//  //connection handle
+//  uint8_t connection_handle;
+//  //flag to check if bluetooth is connected
+//  bool    connected;
+//  //flag to check if HTM indication is on
+//  bool    indication;
+//  //flag to check if push button indication is on
+//  bool button_indication;
+//  //flag to check if indication is in flight
+//  bool    indication_inFlight;
+//  //rollover count variable
+//  uint32_t rollover_cnt;
+//  //flag to check if push button is pressed
+//  bool button_pressed;
+//  bool pb1_button_pressed;
+//  int press_seq;
+//  //flag to check if server and client are bonded
+//  bool bonded;
+//  //variable to save bonding passkey
+//  uint32_t passkey;
+//
+//  //array of structure for indication data
+//  struct buffer_entry indication_buffer[MAX_PTR];
+//  //variable to store read and write pointer of circular buffer
+//  uint8_t rptr, wptr;
+//  //flag to check if the circular buffer is full
+//  bool full;
+//  //variable to keep track of queued indications
+//  uint8_t queued_indication;
+//
+//  // values unique for client
+//  //temperature service handle
+//  uint32_t service_handle;
+//  //temperature characteristic handle
+//  uint16_t char_handle;
+//  //indication characteristic value from server
+//  uint8_t * char_value;
+//  //button service handle
+//  uint32_t button_service_handle;
+//  //button characteristic handle
+//  uint16_t button_char_handle;
+//  //indication characteristic value from server
+//  uint8_t * button_char_value;
+//  //boolean to track GATT command
+//  bool gatt_procedure;
+//
+//
+//} ble_data_struct_t;
+
+
 typedef struct {
 
   // values that are common to servers and clients
@@ -57,10 +120,20 @@ typedef struct {
   uint8_t connection_handle;
   //flag to check if bluetooth is connected
   bool    connected;
-  //flag to check if HTM indication is on
-  bool    indication;
-  //flag to check if push button indication is on
-  bool button_indication;
+
+
+  //flag to check if Linear String measurement indication is on
+  bool    indication_linear_string;
+  //flag to check if Linear Wheel measurement indication is on
+  bool    indication_linear_wheel;
+  //flag to check if Linear Sonic measurement indication is on
+  bool    indication_linear_sonic;
+  //flag to check if Angular measurement indication is on
+  bool    indication_angular_meas;
+  //flag to check if Settings measurement indication is on
+  bool    indication_settings;
+
+
   //flag to check if indication is in flight
   bool    indication_inFlight;
   //rollover count variable
@@ -112,7 +185,7 @@ int dequeue();
 
 #if DEVICE_IS_BLE_SERVER
 
-void ble_SendTemp();
+void ble_SendMeasurement(lcd_screens_t measurement_type,float value);
 
 void ble_SendButtonState(uint8_t value);
 

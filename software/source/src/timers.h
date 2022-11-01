@@ -8,7 +8,7 @@
 #ifndef SRC_TIMERS_H_
 #define SRC_TIMERS_H_
 
-#include "src/oscillators.h"
+#include "oscillators.h"
 #include "app.h"
 
 #include "em_letimer.h"

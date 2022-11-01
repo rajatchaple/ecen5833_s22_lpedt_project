@@ -52,10 +52,12 @@
 #include "lcd.h"
 
 // Include logging for this file
-#define INCLUDE_LOG_DEBUG 1
+//#define INCLUDE_LOG_DEBUG 1
 #include "log.h"
+#include "gpio.h"
 
 #include "lcd_bitmap.h"
+#include "sl_memlcd.h"
 
 
 
@@ -90,6 +92,7 @@ static struct display_data         *displayGetData() {
   return &global_display_data;
 }
 
+//GLIB_Rectangle_t Rectangle1 = {48
 
 
 // ****************************************************************
@@ -128,6 +131,12 @@ void displayPrintf(enum display_row row, const char *format, ...)
   size_t                 strLen;
   char                   strToDisplay[DISPLAY_ROW_LEN+1]; // +1 for null terminator
   char                   strToErase[DISPLAY_ROW_LEN+1];   // +1 for null terminator
+
+//  // Use Narrow font
+//    status = GLIB_setFont(&display->glibContext, (GLIB_Font_t *) &GLIB_FontNumber16x20);
+//    if (status != GLIB_OK) {
+//        LOG_ERROR("GLIB_setFont() returned non-zero error code=0x%04x", (unsigned int) status);
+//    }
 
   // Range check the row number
   if (row >= DISPLAY_NUMBER_OF_ROWS) {
@@ -184,29 +193,30 @@ void displayPrintf(enum display_row row, const char *format, ...)
                                  &strToErase[0],
                                  row,
                                  GLIB_ALIGN_CENTER,
-                                 0,        // x offset
-                                 0,        // y offset
+                                 35,        // x offset
+                                 -5,        // y offset
                                  true);    // opaque
   if (status != GLIB_OK) {
       LOG_ERROR("Erase GLIB_drawStringOnLine() returned non-zero error code=0x%04x", (unsigned int) status);
   }
 
+//  strToDisplay = reverse(strToDisplay);
 
   // Draw the new string on the memory lcd display
   status = GLIB_drawStringOnLine(&display->glibContext,
-                                 &strToDisplay[0],
+                                 reverse(&strToDisplay[0]),
                                  row,
                                  GLIB_ALIGN_CENTER,
-                                 0,        // x offset
-                                 0,        // y offset
+                                 35,        // x offset
+                                 -5,        // y offset
                                  true);    // opaque
   if (status != GLIB_OK) {
       LOG_ERROR("Draw GLIB_drawStringOnLine() returned non-zero error code=0x%04x", (unsigned int) status);
   }
 
-  GLIB_clear(&display->glibContext);
+//  GLIB_clear(&display->glibContext);
 
-  draw_custom_graphics(&display->glibContext);
+//  draw_custom_graphics(&display->glibContext);
 //  status = GLIB_drawCircle(&display->glibContext, 72,
 //                           84, 15);
 //  if (status != GLIB_OK) {
@@ -223,6 +233,117 @@ void displayPrintf(enum display_row row, const char *format, ...)
 
 
 
+void displayUnit(enum display_row row, const char *format, ...)
+{
+  va_list     va;        // Declare a variable argument list, see the
+  // implementation of sprintf() for an example
+  // of handling variable number of arguments passed to
+  // a function.
+
+  EMSTATUS               status;
+  struct display_data    *display = displayGetData();
+  size_t                 strLen;
+  char                   strToDisplay[DISPLAY_ROW_LEN+1]; // +1 for null terminator
+  char                   strToErase[DISPLAY_ROW_LEN+1];   // +1 for null terminator
+
+//  status = GLIB_setFont(&display->glibContext, (GLIB_Font_t *) &GLIB_FontNormal8x8);
+//  if (status != GLIB_OK) {
+//      LOG_ERROR("GLIB_setFont() returned non-zero error code=0x%04x", (unsigned int) status);
+//  }
+
+
+  // Range check the row number
+  if (row >= DISPLAY_NUMBER_OF_ROWS) {
+      LOG_ERROR("row parameter %d is greater than max row index %d", (int) row, (int) DISPLAY_NUMBER_OF_ROWS-1);
+      return;
+  }
+  // Note: enum types are unsigned, so negative row values passed in become large
+  //       positive values trapped by the the range check above.
+  //if (row < 0) {
+  //    LOG_ERROR("row parameter %d is negative", (int) row);
+  //    return;
+  //}
+
+  // Convert the variable length / formatted input to a string
+  // IMPORTANT: Don't use sprintf() as that can write beyond the end of the buffer
+  //            allocated for strToDisplay!
+  //            And we have to use the "v" versions as these are designed to
+  //            accept the variadic (variable length) argument list.
+  va_start(va, format);  // initialize the list with args after format
+  strLen = vsnprintf(strToDisplay, DISPLAY_ROW_LEN+1, format, va);
+  // strLen represents the number of characters in the string after substitution,
+  // including the null terminator, not the number of characters copied to strToDisplay
+  va_end(va);
+
+  if (strLen == 0) {
+      // If a null string was passed in, make it a space + null
+      // this is how we can clear a whole line on the LCD display.
+      // This is really a trap to keep GLIB_drawStringOnLine() from throwing an error
+      // for a zero length string.
+      strToDisplay[0] = ' '; // space
+      strToDisplay[1] = 0;   // null
+      strLen          = 2;
+  } else {
+      // Not null string, then check if it's too big & warn the user that their
+      // string got truncated
+      if ((strLen-1) > DISPLAY_ROW_LEN) {
+          // For feedback to the user, we don't count the null terminator char, so
+          // DISPLAY_ROW_LEN and not DISPLAY_ROW_LEN+1
+          LOG_WARN("Your formatted string for row=%d was truncated to (%d) characters", row, DISPLAY_ROW_LEN);
+          LOG_WARN("  The truncated string is: %s", strToDisplay);
+      } // if
+  } // else
+
+
+  // We always erase the whole line first, then draw the new string. This way
+  // we don't leave any pixels set from the previous characters.
+  for (int i=0; i<DISPLAY_ROW_LEN; i++) {
+      strToErase[i] = ' ';         // space
+  }
+  strToErase[DISPLAY_ROW_LEN] = 0; // null
+
+  // Erase the row
+  status = GLIB_drawStringOnLine(&display->glibContext,
+                                 &strToErase[0],
+                                 row,
+                                 GLIB_ALIGN_CENTER,
+                                 -20,        // x offset
+                                 -13,        // y offset
+                                 true);    // opaque
+  if (status != GLIB_OK) {
+      LOG_ERROR("Erase GLIB_drawStringOnLine() returned non-zero error code=0x%04x", (unsigned int) status);
+  }
+
+//  strToDisplay = reverse(strToDisplay);
+  // Draw the new string on the memory lcd display
+  status = GLIB_drawStringOnLine(&display->glibContext,
+                                 reverse(&strToDisplay[0]),
+                                 row,
+                                 GLIB_ALIGN_CENTER,
+                                 -20,        // x offset
+                                 -13,        // y offset
+                                 true);    // opaque
+  if (status != GLIB_OK) {
+      LOG_ERROR("Draw GLIB_drawStringOnLine() returned non-zero error code=0x%04x", (unsigned int) status);
+  }
+
+//  GLIB_clear(&display->glibContext);
+
+//  draw_custom_graphics(&display->glibContext);
+//  status = GLIB_drawCircle(&display->glibContext, 72,
+//                           84, 15);
+//  if (status != GLIB_OK) {
+//        LOG_ERROR("Draw GLIB_drawCircle() returned non-zero error code=0x%04x", (unsigned int) status);
+//    }
+
+  // Update the data the LCD is displaying
+  status = DMD_updateDisplay();
+  if (status != DMD_OK) {
+      LOG_ERROR("DMD_updateDisplay() returned non-zero error code=0x%04x", (unsigned int) status);
+  }
+
+} // displayPrintf()
+
 
 /**
  * Initialize the LCD display.
@@ -234,7 +355,7 @@ void displayInit()
   EMSTATUS    status;
   struct      display_data   *display = displayGetData();
 
-
+  sli_memlcd_spi_handle_t spi_handle;
   // Init our private data structure
   memset(display,0,sizeof(struct display_data));
   display->last_extcomin_state_high = false;
@@ -251,7 +372,24 @@ void displayInit()
   //gpioSensorEnSetOn(); // we need SENSOR_ENABLE=1 which is tied to DISP_ENABLE
   //                     // for the LCD, on all the time now
 
-  enable_sensor();
+//  enable_sensor();
+  gpioLcdSetOn();
+
+//  spi_handle = get_memlcd_spi_handle();
+//
+//  //sl_status_t sli_memlcd_spi_shutdown(sli_memlcd_spi_handle_t *handle);
+//  sli_memlcd_spi_shutdown(&spi_handle);
+//
+//  GPIO_PinModeSet(gpioPortC, 8, gpioModeDisabled, false); //SCLK
+//  GPIO_PinOutClear(gpioPortC,8);
+////  GPIO_PinModeSet(gpioPortC, 7, gpioModeInputPullFilter, false); //SCLK
+////  GPIO_PinOutClear(gpioPortC,7);
+//  GPIO_PinModeSet(gpioPortC, 6, gpioModeDisabled, false); //SCLK
+//  GPIO_PinOutClear(gpioPortC,6);
+//  GPIO_PinModeSet(gpioPortB, 12, gpioModeInputPullFilter, false); //SCLK
+//  GPIO_PinOutSet(gpioPortB,12);
+//    GPIO_PinModeSet(gpioPortD, 12, gpioModeInputPullFilter, false); //SCLK
+//    GPIO_PinOutClear(gpioPortD,12);
 
   // Init the dot matrix display data structure
   display->dmdInitConfig = 0;
@@ -280,10 +418,10 @@ void displayInit()
 
 
   // Use Narrow font
-  status = GLIB_setFont(&display->glibContext, (GLIB_Font_t *) &GLIB_FontNarrow6x8);
+  status = GLIB_setFont(&display->glibContext, (GLIB_Font_t *) &GLIB_FontNumber16x20);
   if (status != GLIB_OK) {
       LOG_ERROR("GLIB_setFont() returned non-zero error code=0x%04x", (unsigned int) status);
-  }
+ }
 
 
   status = DMD_updateDisplay();
@@ -307,12 +445,14 @@ void displayInit()
   //           set up a 1 second repeating soft timer and uncomment the following lines
 
   sl_status_t          timer_response;
-  timer_response = sl_bt_system_set_soft_timer(32768, 2, 0);
+  timer_response = sl_bt_system_set_soft_timer(3277, 2, 0);  //32768 is for 1sec
   if (timer_response != SL_STATUS_OK) {
       LOG_ERROR("Error in soft timer\n\r");
   }
 
 
+
+//  gpioLcdSetOn();
 
 } // displayInit()
 
@@ -341,18 +481,151 @@ void displayUpdate()
 } // displayUpdate()
 
 
-void draw_custom_graphics(GLIB_Context_t *pContext)
+void draw_custom_graphics(const char* screen, int rectangle_number)
 {
+  va_list     va;        // Declare a variable argument list, see the
+  // implementation of sprintf() for an example
+  // of handling variable number of arguments passed to
+  // a function.
+
+  EMSTATUS               status;
+  struct display_data    *display = displayGetData();
+
+  GLIB_clear(&display->glibContext);
+
   for(int r = 0; r<144;r++)
+      {
+        for(int c = 0; c<168;c++)
+          {//array[width * row + col] = value;
+            if(screen[168*r + c] == 0)
+              {
+                status = GLIB_drawPixel(&display->glibContext, r, 168-c);
+                if (status != GLIB_OK)
+                  {
+                      LOG_ERROR("Draw GLIB_drawCircle() returned non-zero error code=0x%04x", (unsigned int) status);
+                   }
+              }
+
+          }
+      }
+
+
+  //Drawing a rectangle
+  if(rectangle_number != NO_RECTANGLE)
     {
-      for(int c = 0; c<168;c++)
-        {//array[width * row + col] = value;
-          if(cu_logo[168*r + c] == 0)
-            GLIB_drawPixel(pContext, r, 168-c);
-        }
+      for(int r = 47 + rectangle_number; r < 81 + rectangle_number; r++)
+          {
+            for(int c = 61; c < 159; c++)
+              {
+                if((r == (47 + rectangle_number)) || (r == (48 + rectangle_number)) ||
+                  (c == 61) || (c == 62) ||
+                  (r == (79 + rectangle_number)) || (r == (80 + rectangle_number)) ||
+                  (c == 157) || (c == 158))
+                  {
+                    status = GLIB_drawPixel(&display->glibContext, r, 168-c);
+                    if (status != GLIB_OK)
+                     {
+                          LOG_ERROR("Draw GLIB_drawCircle() returned non-zero error code=0x%04x", (unsigned int) status);
+                     }
+                  }
+
+              }
+          }
     }
+
+
+  // Update the data the LCD is displaying
+  status = DMD_updateDisplay();
+  if (status != DMD_OK) {
+      LOG_ERROR("DMD_updateDisplay() returned non-zero error code=0x%04x", (unsigned int) status);
+  }
+
+} // displayPrintf()
+
+//void draw_custom_graphics_rectangle(int rectangle_number)
+//{
+////  va_list     va;        // Declare a variable argument list, see the
+//  // implementation of sprintf() for an example
+//  // of handling variable number of arguments passed to
+//  // a function.
+//
+//  EMSTATUS               status;
+//  struct display_data    *display = displayGetData();
+//
+//
+//  for(int r = 47 + rectangle_number; r < 81 + rectangle_number; r++)
+//    {
+//      for(int c = 61; c < 159; c++)
+//        {
+//          if((r == (48 + rectangle_number)) || (r == (49 + rectangle_number)) ||
+//            (c == 61) || (c == 62) ||
+//            (r == (79 + rectangle_number)) || (r == (80 + rectangle_number)) ||
+//            (c == 157) || (c == 158))
+//            {
+//              status = GLIB_drawPixel(&display->glibContext, r, 168-c);
+//              if (status != GLIB_OK)
+//               {
+//                    LOG_ERROR("Draw GLIB_drawCircle() returned non-zero error code=0x%04x", (unsigned int) status);
+//               }
+//            }
+//
+//        }
+//    }
+//
+//  // Update the data the LCD is displaying
+//  status = DMD_updateDisplay();
+//  if (status != DMD_OK) {
+//      LOG_ERROR("DMD_updateDisplay() returned non-zero error code=0x%04x", (unsigned int) status);
+//  }
+//
+//} // displayPrintf()
+//
+void clear_display()
+{
+  EMSTATUS               status;
+  struct display_data    *display = displayGetData();
+
+  GLIB_clear(&display->glibContext);
 }
 
 
 
+//
+//void draw_custom_graphics(GLIB_Context_t *pContext)
+//{
+//  for(int r = 0; r<144;r++)
+//    {
+//      for(int c = 0; c<168;c++)
+//        {//array[width * row + col] = value;
+//          if(menu_linear[168*r + c] == 0)
+//            GLIB_drawPixel(pContext, r, 168-c);
+//        }
+//    }
+//}
 //EMSTATUS GLIB_drawPixel(GLIB_Context_t *pContext, int32_t x, int32_t y)
+
+
+char* reverse(char *s)
+{
+   int length, c;
+   char *begin, *end, temp;
+
+   length = strlen(s);
+   begin  = s;
+   end    = s;
+
+   for (c = 0; c < length - 1; c++)
+      end++;
+
+   for (c = 0; c < length/2; c++)
+   {
+      temp   = *end;
+      *end   = *begin;
+      *begin = temp;
+
+      begin++;
+      end--;
+   }
+   return s;
+}
+

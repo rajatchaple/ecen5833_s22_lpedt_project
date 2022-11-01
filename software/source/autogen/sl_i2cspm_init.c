@@ -18,36 +18,36 @@
 #include "sl_i2cspm.h"
 #include "em_cmu.h"
 // Include instance config 
-#include "sl_i2cspm_sensor_config.h"
+#include "sl_i2cspm_inst_config.h"
 
-sl_i2cspm_t *sl_i2cspm_sensor = SL_I2CSPM_SENSOR_PERIPHERAL;
+sl_i2cspm_t *sl_i2cspm_inst = SL_I2CSPM_INST_PERIPHERAL;
 
-#if SL_I2CSPM_SENSOR_SPEED_MODE == 0
-#define SL_I2CSPM_SENSOR_HLR i2cClockHLRStandard
-#define SL_I2CSPM_SENSOR_MAX_FREQ I2C_FREQ_STANDARD_MAX
-#elif SL_I2CSPM_SENSOR_SPEED_MODE == 1
-#define SL_I2CSPM_SENSOR_HLR i2cClockHLRAsymetric
-#define SL_I2CSPM_SENSOR_MAX_FREQ I2C_FREQ_FAST_MAX
-#elif SL_I2CSPM_SENSOR_SPEED_MODE == 2
-#define SL_I2CSPM_SENSOR_HLR i2cClockHLRFast
-#define SL_I2CSPM_SENSOR_MAX_FREQ I2C_FREQ_FASTPLUS_MAX
+#if SL_I2CSPM_INST_SPEED_MODE == 0
+#define SL_I2CSPM_INST_HLR i2cClockHLRStandard
+#define SL_I2CSPM_INST_MAX_FREQ I2C_FREQ_STANDARD_MAX
+#elif SL_I2CSPM_INST_SPEED_MODE == 1
+#define SL_I2CSPM_INST_HLR i2cClockHLRAsymetric
+#define SL_I2CSPM_INST_MAX_FREQ I2C_FREQ_FAST_MAX
+#elif SL_I2CSPM_INST_SPEED_MODE == 2
+#define SL_I2CSPM_INST_HLR i2cClockHLRFast
+#define SL_I2CSPM_INST_MAX_FREQ I2C_FREQ_FASTPLUS_MAX
 #endif
 
-I2CSPM_Init_TypeDef init_sensor = { 
-  .port = SL_I2CSPM_SENSOR_PERIPHERAL,
-  .sclPort = SL_I2CSPM_SENSOR_SCL_PORT,
-  .sclPin = SL_I2CSPM_SENSOR_SCL_PIN,
-  .sdaPort = SL_I2CSPM_SENSOR_SDA_PORT,
-  .sdaPin = SL_I2CSPM_SENSOR_SDA_PIN,
-  .portLocationScl = SL_I2CSPM_SENSOR_SCL_LOC,
-  .portLocationSda = SL_I2CSPM_SENSOR_SDA_LOC,
+I2CSPM_Init_TypeDef init_inst = { 
+  .port = SL_I2CSPM_INST_PERIPHERAL,
+  .sclPort = SL_I2CSPM_INST_SCL_PORT,
+  .sclPin = SL_I2CSPM_INST_SCL_PIN,
+  .sdaPort = SL_I2CSPM_INST_SDA_PORT,
+  .sdaPin = SL_I2CSPM_INST_SDA_PIN,
+  .portLocationScl = SL_I2CSPM_INST_SCL_LOC,
+  .portLocationSda = SL_I2CSPM_INST_SDA_LOC,
   .i2cRefFreq = 0,
-  .i2cMaxFreq = SL_I2CSPM_SENSOR_MAX_FREQ,
-  .i2cClhr = SL_I2CSPM_SENSOR_HLR
+  .i2cMaxFreq = SL_I2CSPM_INST_MAX_FREQ,
+  .i2cClhr = SL_I2CSPM_INST_HLR
 };
 
 void sl_i2cspm_init_instances(void)
 {
   CMU_ClockEnable(cmuClock_GPIO, true);
-  I2CSPM_Init(&init_sensor);
+  I2CSPM_Init(&init_inst);
 }

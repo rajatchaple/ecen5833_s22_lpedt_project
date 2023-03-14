@@ -1,3 +1,5 @@
+<h1 style="text-align: center;">CUBIT</h1>
+
 ## Background
 Measuring tapes have been in use for centuries and are still the primary tool for taking measurements. However, they have several limitations, including the tedious process of taking and maintaining measurements and the fact that the measurements are single-use. Therefore, our team has designed a smart measuring instrument to digitize the data, which can be easily stored and accessed from anywhere.
 
@@ -9,7 +11,7 @@ Our smart measuring instrument takes precise linear and angular measurements and
   <img src="images/cubit_assemly_cut.jpg" alt="Cubit Assembly" width="500"/>
 
 
-# Getting Started
+## Getting Started
 
 ### Prerequisites:
 * Altium Designer (for PCB design)

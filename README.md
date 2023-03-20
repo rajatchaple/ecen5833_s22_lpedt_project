@@ -28,8 +28,8 @@ Following pages describe the approach used in development of this project over 1
 
 ## Hardware:
 
-- Selection of Components
-- Power management unit selection
+- [Selection of Components](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/Selection-of-Components)
+- [Power management unit selection](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/Power-Management)
 - PMIC Simulation and Bulk capacitance
 - Bulk capacitance value considering DC bias
 - Altium Schematic

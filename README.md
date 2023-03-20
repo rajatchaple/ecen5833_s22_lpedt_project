@@ -28,12 +28,12 @@ Following pages describe the approach used in development of this project over 1
 
 ## Hardware:
 
-- [Selection of Components](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/Selection-of-Components)
-- [Power management unit selection](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/Power-Management)
-- [PMIC Simulation and Bulk capacitance](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/Bulk-Capacitance-Requirement)
-- Altium Schematic
-- Altium Layout Design
-- Fabrication and Assembly
+- [Selection of Components](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/2.-Selection-of-Components)
+- [Power management unit selection](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/3.-Power-Management)
+- [PMIC Simulation and Bulk capacitance](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/4.-Bulk-Capacitance-Requirement)
+- [Altium Schematic](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/5.-Altium-Schematic)
+- [Altium Layout Design](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/6.-Altium-Layout-Design)
+- [Fabrication and Assembly](https://github.com/rajatchaple/ecen5833_s22_lpedt_project/wiki/7.-Fabrication-and-Assembly)
 
 ## Software:
 - LCD bring up
